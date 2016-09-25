@@ -1,0 +1,18 @@
+let mapleader=","
+
+" Folding
+set foldenable
+set foldlevelstart=3
+set foldnestmax=10
+nnoremap <space> za
+set foldmethod=indent
+
+" Relative line numbering
+set relativenumber
+
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
+
+" Map Caps Lock to Esc
+imap jj <Esc>
+set timeoutlen=300
