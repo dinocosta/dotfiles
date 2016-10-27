@@ -1,6 +1,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/joaocosta/.oh-my-zsh
 
+# Miniconda export.
+export DYLD_FALLBACK_LIBRARY_PATH=$HOME/miniconda3/lib/:$DYLD_FALLBACK_LIBRARY_PATH
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -64,6 +67,8 @@ plugins=(git)
 
 export PATH="/opt/local/bin:/opt/local/sbin:/Users/joaocosta/.cabal/bin:/Applications/ghc-7.8.4.app/Contents/bin:/Users/joaocosta/.rbenv/shims:/Users/joaocosta/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texbin"
 export PATH=~/miniconda3/bin:"$PATH"
+# Path for JADE (Java Agent Development Framework)
+export JADE=~/Universidade/AI/JADE/jade-bin/lib
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -95,6 +100,12 @@ export LANG="pt_PT.UTF-8"
 alias dev='cd ~/Developer'
 # University related alias.
 alias uni='cd ~/Universidade'
+alias aasb='cd ~/Universidade/AASB'
+alias abd='cd ~/Universidade/ABD'
+alias aec='cd ~/Universidade/AEC'
+alias ai='cd ~/Universidade/AI'
+alias as='cd ~/Universidade/AS'
+alias icd='cd ~/Universidade/ICD'
 # Alias to clean xcode.
 alias xcodeclean="rm -frd ~/Library/Developer/Xcode/DerivedData/* && rm -frd ~/Library/Caches/com.apple.dt.Xcode/*"
 alias simulatorclean="rm -rfd ~/Library/Developer/CoreSimulator/*"
