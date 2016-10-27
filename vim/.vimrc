@@ -11,37 +11,34 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
-
-" NERDTree
-Plugin 'scrooloose/nerdtree'
-Plugin 'ryanoasis/vim-devicons'
-
 Plugin 'itchyny/lightline.vim'
-
-Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'rking/ag.vim'
-
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'Yggdroot/indentLine'
+Plugin 'chriskempson/base16-vim'
 " Language specific
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'slim-template/vim-slim'
-Plugin 'othree/yajs.vim'
-Plugin 'othree/javascript-libraries-syntax.vim'
+Plugin 'onemanstartup/vim-slim'
 Plugin 'https://github.com/Raimondi/delimitMate.git'
 Plugin 'https://github.com/justinmk/vim-syntax-extra.git'
 Plugin 'othree/html5.vim'
 Plugin 'keith/swift.vim'
 Plugin 'jplaut/vim-arduino-ino'
-Plugin 'JulesWang/css.vim' " only necessary if your Vim version < 7.4
 Plugin 'cakebaker/scss-syntax.vim'"
-
-" Emmet
 Plugin 'mattn/emmet-vim'"
-" Change emmet shortcut to ctrl+e+,
+Bundle 'vim-ruby/vim-ruby'
+
+" ==> PLUGIN CONFIGURATION.
+
+" EMMET
+" " Change emmet shortcut to ctrl+z+,
 let g:user_emmet_leader_key='<C-Z>'
 
-" Colorschemes
-Plugin 'chriskempson/base16-vim'
+" INDENTLINE
+" " Change indentation char.
+let g:indentLine_char = "│"
+" " Change color of indent lines.
+let g:indentLine_color_term = 240
+
+" ==> VIM CONFIGURATION
 
 " Folding
 set foldenable
@@ -63,20 +60,24 @@ nnoremap <leader><space> :nohlsearch<CR>
 " imap <left> <nop>
 " imap <right> <nop>
 
+
 call vundle#end()            " required for Vundler
+syntax on
+filetype on
+filetype plugin on
+filetype indent on
 filetype plugin indent on    " required for Vundler
 
 set encoding=utf-8
 scriptencoding utf-8
 
-syntax enable
 
 " set t_Co=256
 " ---> Change colorscheme according to iTerm profile.
 if $ITERM_PROFILE == 'Night'
   colorscheme Tomorrow-Night
 else
-  colorscheme base16-default
+  colorscheme base16-default-light
 endif
 
 " ---> Change background according to iTerm profile.
@@ -191,49 +192,20 @@ nmap <silent> ,y :new<CR>:call setline(1,getregtype())<CR>o<Esc>P:wq! ~/.vim/.re
 map <silent> ,p :sview ~/.vim/.reg.txt<CR>"zdddG:q!<CR>:call setreg('"', @", @z)<CR>p
 map <silent> ,P :sview ~/.vim/.reg.txt<CR>"zdddG:q!<CR>:call setreg('"', @", @z)<CR>P
 
-" neocomplete plugin
-let g:neocomplete#enable_at_startup = 1
+" yank to clipboard
+if has ("clipboard")
+  set clipboard=unnamed " copy to the system clipboard
 
-" NERDTree
-" Ctrl+n toggles NERDTree
-map <C-n> :NERDTreeToggle<CR>
-
-" Using custom arrows with NERDTree
-let g:NERDTreeDirArrows=1
-
-" Close NERDTree if it's the only window open
-
-" Close NERDTree if it's the only window open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-" Autostart NERDTree
-"autocmd vimenter * NERDTree
-
-" Autostart NERDTree when no files are present
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-" Set initial focus to vim instead of NERDTree
-"autocmd VimEnter * wincmd l
-"autocmd BufNew   * wincmd l
-
-" Vim airline
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline#extensions#branch#enabled=1
-
-" let g:airline_powerline_fonts = 1
-
-" Preventing airline from hiding with NerdTreeToggle
-" NerdTreeToggleset laststatus=2
+  if has ("unnamedplus") " X11 Support
+    set clipboard+=unnamedplus
+  endif
+endif
 
 " Fuzzy search by filename
 let g:ctrlp_by_filename = 1
 
 " Reduce delay in Esc mode switching
 set ttimeoutlen=50
-
-" Mapping ag.vim to Ctrl + G
-nnoremap <C-g> :Ag<Space>
 
 " Old EasyMotion keybinding
 map <Leader> <Plug>(easymotion-prefix)
