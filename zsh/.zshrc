@@ -109,6 +109,8 @@ alias icd='cd ~/Universidade/ICD'
 # Alias to clean xcode.
 alias xcodeclean="rm -frd ~/Library/Developer/Xcode/DerivedData/* && rm -frd ~/Library/Caches/com.apple.dt.Xcode/*"
 alias simulatorclean="rm -rfd ~/Library/Developer/CoreSimulator/*"
+# alias needed for tmux.
+alias open="reattach-to-user-namespace open"
 
 # function parse_git_branch {
 #   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
