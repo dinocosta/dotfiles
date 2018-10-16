@@ -13,8 +13,11 @@ env:
   # `infocmp xterm-256color`.
   TERM: xterm-256color
 
-window:
-  decorations: false
+# If you enable the two lines above the Alacritty window
+# title bar will disappear.
+#
+# window:
+#   decorations: false
 
 
 # Window dimensions in character columns and lines
