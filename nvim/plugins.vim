@@ -54,6 +54,10 @@ Plug 'mhinz/vim-mix-format'
 " Asynchronous linting/fixing for Vim and Language Server Protocol (LSP) integration.
 Plug 'w0rp/ale'
 
+" UltiSnips - The ultimate snippet solution for Vim.
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+
 " Add plugins to &runtimepath
 call plug#end()
 
@@ -140,3 +144,10 @@ let g:netrw_sort_sequence = '[\/]$,*'
 
 " Ignore .pyc files.
 let NERDTreeIgnore = ['\.pyc$']
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" UtilSnips
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:UltiSnipsExpandTrigger="<C-j>"
+let g:UltiSnipsJumpForwardTrigger="<C-j>"
+let g:UltiSnipsJumpBackwardTrigger="<C-k>"
