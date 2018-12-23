@@ -19,7 +19,7 @@ LANGUAGE=
 # Terminal Type.
 # export TERM='screen-256color'
 # When using iTerm2 prefer this one:
-export TERM='screen-256color'
+export TERM='xterm-256color'
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -84,6 +84,7 @@ plugins=(
   git
   virtualenv
   kubectl
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -93,6 +94,9 @@ source $ZSH/oh-my-zsh.sh
 export MANPATH="/usr/local/man:$MANPATH"
 export PATH="/opt/local/bin:/opt/local/sbin:/Users/joaocosta/.cabal/bin:/Applications/ghc-7.8.4.app/Contents/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texbin"
 
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=245"
+
+fpath+=${HOME:-~}/.dotfiles/functions
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -127,7 +131,6 @@ export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 # Real vim
 alias bim="vim"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
-export DARK_BACKGROUND=True
 
 
 # Needed for AWS Kubernetes Authenticator
