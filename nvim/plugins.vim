@@ -4,30 +4,28 @@ call plug#begin()
 " A command-line fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
 " A vim plugin to display the indention levels with thin vertical lines.
 Plug 'Yggdroot/indentLine'
-" slim syntax highlighting for vim.
-Plug 'onemanstartup/vim-slim'
+
 " Vim plugin, provides insert mode auto-completion for quotes, parens, brackets, etc.
 Plug 'Raimondi/delimitMate'
+
 " A collection of syntax definitions not yet shipped with stock vim.
 Plug 'justinmk/vim-syntax-extra'
-" HTML5 omnicomplete and syntax.
-Plug 'othree/html5.vim'
-" Vim runtime files for Swift.
-Plug 'keith/swift.vim', { 'for': 'swift' }
+
 " Arduino on Vim.
 Plug 'jplaut/vim-arduino-ino', { 'for': 'arduino' }
-" Vim syntax file for scss (Sassy CSS).
-Plug 'cakebaker/scss-syntax.vim'"
-" emmet for vim.
-Plug 'mattn/emmet-vim'
+
 " Base 16 colorschemes.
 Plug 'chriskempson/base16-vim'
+
 " Flake8 Plugin for Vim
-Plug 'nvie/vim-flake8'
+Plug 'nvie/vim-flake8', { 'for': 'python' }
+
 " Vim configuration files for Elixir
-Plug 'elixir-lang/vim-elixir'
+Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+
 " fugitive.vim: a Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -36,20 +34,17 @@ Plug 'sonph/onehalf', {'rtp': 'vim/'}
 " Spotify integration for vim
 Plug 'HendrikPetertje/vimify'
 
-" An arctic, north-bluish clean and elegant Vim theme.
-Plug 'arcticicestudio/nord-vim'
-
 " Dark powered asynchronous completion framework for neovim/Vim8
 Plug 'Shougo/deoplete.nvim'
 
 " Elixir Integration Into Vim
-Plug 'slashmili/alchemist.vim'
+Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 
 " A tree explorer plugin for vim.
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 
 " Vim integration for the Elixir formatter.
-Plug 'mhinz/vim-mix-format'
+Plug 'mhinz/vim-mix-format', { 'for': 'elixir' }
 
 " Asynchronous linting/fixing for Vim and Language Server Protocol (LSP) integration.
 Plug 'w0rp/ale'
@@ -58,7 +53,7 @@ Plug 'w0rp/ale'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
-" Add plugins to &runtimepath
+" Add plugins to runtimepath
 call plug#end()
 
 " ==> Vimify
