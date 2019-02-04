@@ -118,6 +118,9 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/local/Cellar/python/2.7.13/bin/python
 source /usr/local/bin/virtualenvwrapper.sh
 export WORKON_HOME=~/.virtualenvs
 
+# RabbitMQ CLI Tools.
+export PATH=$PATH:/usr/local/sbin
+
 # Shell histority in IEx
 export ERL_AFLAGS="-kernel shell_history enabled"
 
@@ -132,14 +135,20 @@ export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 alias bim="vim"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 
-
 # Needed for AWS Kubernetes Authenticator
 export PATH=$PATH:/Users/joaocosta/go/bin
 
-source ~/.secrets
+# Go
+export PATH=$PATH:/usr/local/go/bin
 
 # color for less and man
 export MANPAGER='less -s -M +Gg'
 export LESS="--RAW-CONTROL-CHARS"
 lesscolors=$HOME/bin/.LESS_TERMCAP
 [[ -f $lesscolors ]] && . $lesscolors
+
+# asdf
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
+source ~/.secrets
