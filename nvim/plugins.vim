@@ -53,6 +53,9 @@ Plug 'w0rp/ale'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+" Go development plugin for Vim.
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 " Add plugins to runtimepath
 call plug#end()
 
