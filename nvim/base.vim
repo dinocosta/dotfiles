@@ -114,3 +114,9 @@ set listchars+=tab:▸\
 set listchars+=extends:→
 set listchars+=precedes:←
 set listchars+=nbsp:⣿
+
+" Persistent Undo.
+" Make sure you have the folder ~/.vim/undodir because
+" that's where the undo files will be created.
+set undofile
+set undodir=~/.vim/undodir
