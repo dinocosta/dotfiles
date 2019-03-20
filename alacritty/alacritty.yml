@@ -84,7 +84,7 @@ font:
     style: Italic
 
   # Point size of the font
-  size: 14.0
+  size: 12.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -425,8 +425,8 @@ key_bindings:
   - { key: F10,      mods: Command, chars: "\x1b[21;3~"                  }
   - { key: F11,      mods: Command, chars: "\x1b[23;3~"                  }
   - { key: F12,      mods: Command, chars: "\x1b[24;3~"                  }
-  - { key: Z,        mods: Command,       chars: "\x01\x7a"              }
-  - { key: Slash,    mods: Command,       chars: "\x01\x5b"              }
+  - { key: Z,        mods: Command, chars: "\x01\x7a"                    }
+  - { key: Slash,    mods: Command, chars: "\x01\x5b"                    }
   # The following key bindings allows us to use iTerm2 shortcuts on
   # Tmux.
   - { key: D,        mods: Command,       chars: "\x01\x5c"              }
