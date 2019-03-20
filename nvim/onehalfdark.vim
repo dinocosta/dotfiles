@@ -56,10 +56,13 @@ endfunction
 highlight Search cterm=None ctermfg=black ctermbg=253
 "
 " Current line
-highlight CursorLine ctermbg=235
+hi CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
 
 " Whitespace characters
 hi NonText ctermfg=240 guifg=70
 
 " Change color of indent lines.
 let g:indentLine_color_term = 240
+
+" Change color of search results.
+hi Search ctermbg=red ctermfg=8
