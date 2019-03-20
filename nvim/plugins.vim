@@ -56,6 +56,16 @@ Plug 'honza/vim-snippets'
 " Go development plugin for Vim.
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+" Search Dash.app from Vim
+Plug 'rizzatti/dash.vim'
+
+" 🌷 Distraction-free writing in Vim
+Plug 'junegunn/goyo.vim'
+
+" Markdown plugins.
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
 " Add plugins to runtimepath
 call plug#end()
 
