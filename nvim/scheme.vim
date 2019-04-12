@@ -7,4 +7,4 @@ function! ReadOnly()
     return ''
 endfunction
 
-so $HOME/.dotfiles/nvim/onehalfdark.vim
+source $HOME/Developer/dotfiles/nvim/onehalfdark.vim
