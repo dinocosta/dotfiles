@@ -24,6 +24,12 @@ let g:currentmode={
 colorscheme onehalfdark
 set background=dark
 
+" Background color.
+highlight Normal ctermfg=188 ctermbg=0
+
+" Line number.
+highlight LineNr ctermfg=247 ctermbg=0
+
 " StatusLine
 highlight statusbarcolor ctermfg=black ctermbg=white
 set laststatus=2
