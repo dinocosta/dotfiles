@@ -396,3 +396,6 @@ install_app "1Password 7" "mas install 1333542190"
 
 # VLC.
 install_app "VLC" "brew cask install vlc"
+
+# Logitech Options.
+install_app "Logi Options" "brew cask install homebrew/cask-drivers/logitech-options"
