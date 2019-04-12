@@ -1,0 +1,25 @@
+pane	0	1	:zsh	1	:*	0	:/Users/joaocosta	1	zsh	:
+pane	1	1	:orchestrator	0	:#	0	:/Users/joaocosta/Developer/pynus	0	nvim	:nvim
+-zsh
+pane	1	1	:orchestrator	0	:#	1	:/Users/joaocosta/Developer/pynus	0	zsh	:
+pane	1	1	:orchestrator	0	:#	2	:/Users/joaocosta/Developer/pynus	1	zsh	:
+pane	1	2	:exercism	0	:#	0	:/Users/joaocosta/Exercism/elixir/bob	0	nvim	:nvim bob.exs
+-zsh
+pane	1	2	:exercism	0	:#	1	:/Users/joaocosta/Exercism/elixir/sieve	0	zsh	:
+pane	1	2	:exercism	0	:#	2	:/Users/joaocosta/Exercism/elixir/bob	1	zsh	:
+pane	1	3	:eraser	0	:#	0	:/Users/joaocosta/Developer/eraser	0	nvim	:nvim
+-zsh
+pane	1	3	:eraser	0	:#	1	:/Users/joaocosta/Developer/eraser	1	zsh	:
+pane	1	4	:core	0	:-	0	:/Users/joaocosta/Developer/core	0	zsh	:
+pane	1	4	:core	0	:-	1	:/Users/joaocosta/Developer/core	1	zsh	:
+pane	1	4	:core	0	:-	2	:/Users/joaocosta/Developer/core	0	zsh	:
+pane	1	5	:k8s	1	:*	0	:/Users/joaocosta/Developer/k8s	1	zsh	:
+pane	1	5	:k8s	1	:*	1	:/Users/joaocosta/Developer/k8s	0	zsh	:
+pane	1	5	:k8s	1	:*	2	:/Users/joaocosta/Developer/k8s	0	zsh	:
+window	0	1	1	:*	ba5d,255x81,0,0,0
+window	1	1	0	:#	69a8,255x81,0,0{127x81,0,0,1,127x81,128,0[127x41,128,0,2,127x39,128,42,3]}
+window	1	2	0	:#	d865,255x81,0,0{127x81,0,0,4,127x81,128,0[127x40,128,0,5,127x40,128,41,6]}
+window	1	3	0	:#	1778,255x81,0,0{127x81,0,0,7,127x81,128,0,8}
+window	1	4	0	:-	83b8,255x81,0,0{127x81,0,0,9,127x81,128,0[127x40,128,0,10,127x40,128,41,11]}
+window	1	5	1	:*	a150,255x81,0,0{127x81,0,0,12,127x81,128,0[127x40,128,0,13,127x40,128,41,14]}
+state	1	0
