@@ -1,4 +1,4 @@
-export DOTFILES="$HOME/.dotfiles"
+export DOTFILES="$HOME/Developer/dotfiles"
 
 # Language.
 LC_CTYPE='en_US.UTF-8'
@@ -25,10 +25,9 @@ export TERM='xterm-256color'
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/joaocosta/.oh-my-zsh
+export ZSH=/Users/$USER/.oh-my-zsh
 
 source $DOTFILES/zsh/theme_light.zsh
-source $DOTFILES/functions/functions.zsh
 source $DOTFILES/functions/aliases.zsh
 
 # Set list of themes to load
@@ -84,7 +83,6 @@ plugins=(
   git
   virtualenv
   kubectl
-  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -92,11 +90,10 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export MANPATH="/usr/local/man:$MANPATH"
-export PATH="/opt/local/bin:/opt/local/sbin:/Users/joaocosta/.cabal/bin:/Applications/ghc-7.8.4.app/Contents/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texbin"
+export PATH="/opt/local/bin:/opt/local/sbin:/Users/$USER/.cabal/bin:/Applications/ghc-7.8.4.app/Contents/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texbin"
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=245"
 
-fpath+=${HOME:-~}/.dotfiles/functions
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -114,7 +111,7 @@ fpath+=${HOME:-~}/.dotfiles/functions
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 # Virtualenvwrapper
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/Cellar/python/2.7.13/bin/python
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 source /usr/local/bin/virtualenvwrapper.sh
 export WORKON_HOME=~/.virtualenvs
 
@@ -127,7 +124,8 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 # Fuzzy Finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-source /Users/joaocosta/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PATH="/usr/local/opt/mongodb@3.2/bin:$PATH"
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 
@@ -136,7 +134,7 @@ alias bim="vim"
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 
 # Needed for AWS Kubernetes Authenticator
-export PATH=$PATH:/Users/joaocosta/go/bin
+export PATH=$PATH:/Users/$USER/go/bin
 
 # Go
 export PATH=$PATH:/usr/local/go/bin
@@ -148,7 +146,5 @@ lesscolors=$HOME/bin/.LESS_TERMCAP
 [[ -f $lesscolors ]] && . $lesscolors
 
 # asdf
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
-
-source ~/.secrets
+. /usr/local/opt/asdf/asdf.sh
+. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
