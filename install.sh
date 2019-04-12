@@ -284,14 +284,22 @@ asdf plugin-add ruby
 pp_success "Succesfully added asdf plugins."
 
 # zsh-syntax-highlighting.
-pp_info "Installing zsh-syntax-highlighting..."
-brew install zsh-syntax-highlighting
-pp_success "Succesfully installed zsh-syntax-highlighting."
+if [ ! -d "/usr/local/share/zsh-syntax-highlighting" ]; then
+  pp_info "Installing zsh-syntax-highlighting..."
+  brew install zsh-syntax-highlighting
+  pp_success "Succesfully installed zsh-syntax-highlighting."
+else
+  pp_success "zsh-syntax-highlighting already installed."
+fi
 
 # zsh-autosuggestions
-pp_info "Installing zsh-autosuggestions..."
-brew install zsh-autosuggestions
-pp_success "Succesfully installed zsh-autosuggestions."
+if [ ! -d "/usr/local/share/zsh-autosuggestions" ]; then
+  pp_info "Installing zsh-autosuggestions..."
+  brew install zsh-autosuggestions
+  pp_success "Succesfully installed zsh-autosuggestions."
+else
+  pp_success "zsh-autosuggestions already installed."
+fi
 
 # install geometry theme.
 pp_info "Installing geometry ZSH theme..."
@@ -384,4 +392,7 @@ install_app "eqMac2" "brew cask install eqmac"
 install_app "gfxCardStatus" "brew cask install gfxcardstatus"
 
 # 1Password.
-install_app "1Password" "mas install 1333542190"
+install_app "1Password 7" "mas install 1333542190"
+
+# VLC.
+install_app "VLC" "brew cask install vlc"
