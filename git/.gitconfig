@@ -1,0 +1,12 @@
+[user]
+	email = dinojoaocosta@gmail.com
+	name = joaofcosta
+[core]
+	excludesfile = /Users/joaocosta/.gitignore
+	editor = nvim
+[difftool]
+	prompt = false
+[alias]
+  d = difftool
+[diff]
+	tool = vimdiff
