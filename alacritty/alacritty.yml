@@ -67,19 +67,19 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: Input Mono
+    family: Fira Code
     # Style can be specified to pick a specific face.
     style: Regular
 
   # The bold font face
   bold:
-    family: Input Mono
+    family: Fira Code
     # Style can be specified to pick a specific face.
     style: Bold
 
   # The italic font face
   italic:
-    family: Input Mono
+    family: Fira Code
     # Style can be specified to pick a specific face.
     style: Italic
 
@@ -435,6 +435,8 @@ key_bindings:
   - { key: K,        mods: Command,       chars: "\x01\x6b"              }
   - { key: L,        mods: Command,       chars: "\x01\x6c"              }
   - { key: T,        mods: Command,       chars: "\x01\x63"              }
+  - { key: P,        mods: Command,       chars: "\x01\x70"              }
+  - { key: N,        mods: Command,       chars: "\x01\x6e"              }
   - { key: Key0,     mods: Command,       chars: "\x01\x30"              }
   - { key: Key1,     mods: Command,       chars: "\x01\x31"              }
   - { key: Key2,     mods: Command,       chars: "\x01\x32"              }
