@@ -1,2 +1,5 @@
 # Ignore work related functions.
 functions/work.zsh
+
+# Ignore DS Store
+.DS_Store
