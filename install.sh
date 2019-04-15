@@ -399,3 +399,6 @@ install_app "VLC" "brew cask install vlc"
 
 # Logitech Options.
 install_app "Logi Options" "brew cask install homebrew/cask-drivers/logitech-options"
+
+# StarUML.
+install_app "StarUML" "brew cask install staruml"
