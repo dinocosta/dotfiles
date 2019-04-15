@@ -18,3 +18,7 @@ the project, run:
 ```
 ./install.sh
 ```
+
+After installation you'll still need to manually install the following:
+
+* [Input Mono Font](http://input.fontbureau.com/)
