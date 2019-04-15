@@ -215,6 +215,15 @@ else
   pp_success "The Silver Searcher/AG already installed."
 fi
 
+# Ctags.
+if [[ "$(which ctags)" != "/usr/local/bin/ctags" ]]; then
+  pp_info "Installing ctags..."
+  brew install ctags
+  pp_success "Successfully installed ctags."
+else
+  pp_success "ctags already installed."
+fi
+
 
 # -------------------------------------------------------------------------
 # Configurations & Dotfiles
