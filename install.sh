@@ -411,3 +411,6 @@ install_app "Logi Options" "brew cask install homebrew/cask-drivers/logitech-opt
 
 # StarUML.
 install_app "StarUML" "brew cask install staruml"
+
+# Calibre.
+install_app "Calibre" "brew cask install calibre"
