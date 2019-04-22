@@ -414,3 +414,6 @@ install_app "StarUML" "brew cask install staruml"
 
 # Calibre.
 install_app "Calibre" "brew cask install calibre"
+
+# myTuner Radio.
+install_app "myTuner Radio" "mas install 881415018"
