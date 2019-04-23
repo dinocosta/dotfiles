@@ -21,6 +21,6 @@ the project, run:
 
 After installation you'll still need to manually install the following:
 
-* [Input Mono Font](http://input.fontbureau.com/download/?customize&fontSelection=fourStyleFamily&regular=InputSans-Regular&italic=InputSans-Italic&bold=InputSans-Bold&boldItalic=InputSans-BoldItalic&a=ss&g=ss&i=0&l=0&zero=0&asterisk=0&braces=straight&preset=default&line-height=1.2&email=)
+* [Input Mono Font](http://input.fontbureau.com/download/?customize&fontSelection=whole&a=ss&g=ss&i=0&l=0&zero=0&asterisk=height&braces=straight&preset=default&line-height=1.2&email=)
 * [Videostream](https://getvideostream.com/download/#)
 * [Calibre Kobo Utilities Plugin](https://www.mobileread.com/forums/showthread.php?t=215339)
