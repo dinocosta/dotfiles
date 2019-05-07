@@ -250,7 +250,7 @@ pp_success "Tmux plugin manager successfully installed."
 # Link TMUX configuration.
 pp_info "Updating TMUX configuraiton..."
 rm $HOME/.tmux.conf
-ln -s $DOTFILES/tmux.conf $HOME/.tmux.conf
+ln -s $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
 pp_success "TMUX configuration updated."
 
 # Vim Plug.
