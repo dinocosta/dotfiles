@@ -25,5 +25,6 @@ After installation you'll still need to manually install the following:
 * [Videostream](https://getvideostream.com/download/#)
 * [Calibre Kobo Utilities Plugin](https://www.mobileread.com/forums/showthread.php?t=215339)
 * [Wallpaper](https://cdn.vox-cdn.com/uploads/chorus_asset/file/13272831/The_Verge_Hysteresis_Wallpaper_Landscape.0.png)
+* [Installing TMUX Plugins with TPM](https://github.com/tmux-plugins/tpm#installing-plugins)
 
 Finally enable Reduce Motion on MacOS: `System Preferences > Accessibility > Display > Reduce Motion`.
