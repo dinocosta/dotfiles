@@ -420,3 +420,6 @@ install_app "myTuner Radio" "mas install 881415018"
 
 # Vanilla.
 install_app "Vanilla" "brew cask install vanilla"
+
+# DevDocs.
+install_app "DevDocs" "brew cask install devdocs"
