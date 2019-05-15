@@ -83,6 +83,7 @@ plugins=(
   git
   virtualenv
   kubectl
+  pipenv
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -126,6 +127,7 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source "/Users/dino.costa/Library/Application Support/creds/nexus"
 export PATH="/usr/local/opt/mongodb@3.2/bin:$PATH"
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 
@@ -148,3 +150,6 @@ lesscolors=$HOME/bin/.LESS_TERMCAP
 # asdf
 . /usr/local/opt/asdf/asdf.sh
 . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
