@@ -231,6 +231,9 @@ fi
 
 SECTION="Configuration"
 
+# Create configuration folder.
+mkdir ~/.config
+
 # Clone dotfiles.
 pp_info "Cloning dotfiles from Github..."
 git clone https://github.com/joaofcosta/dotfiles.git $DOTFILES
@@ -239,7 +242,7 @@ pp_success "Succesfully cloned dotfiles."
 # Link Alacritty configuration.
 pp_info "Updating Alacritty configuration..."
 rm -rf ~/.config/alacritty
-dirlink alacritty ~/.config
+dirlink alacritty ~/.config/alacritty
 pp_success "Alacritty configuration updated."
 
 # tmux Plugin manager.
@@ -262,7 +265,7 @@ pp_success "Vim Plug successfully installed."
 # Link NeoVim configuration.
 pp_info "Updating NeoVim configuraiton..."
 rm -rf ~/.config/nvim
-dirlink nvim ~/.config
+dirlink nvim ~/.config/nvim
 pp_success "NeoVim configuration updated."
 
 # Link ZSH configuration.
@@ -323,7 +326,7 @@ pp_info "Git configure succesfully."
 
 # Link karabiner configurations.
 pp_info "Updating Karabiner configuration..."
-dirlink karabiner ~/.config
+dirlink karabiner ~/.config/karabiner
 pp_success "Karabiner configuration updated."
 
 # -------------------------------------------------------------------------
