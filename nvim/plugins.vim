@@ -66,6 +66,9 @@ Plug 'junegunn/goyo.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 
+" The uncompromising Python code formatter
+Plug 'python/black', { 'for': 'python' }
+
 " Add plugins to runtimepath
 call plug#end()
 
