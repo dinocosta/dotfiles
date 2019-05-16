@@ -250,7 +250,7 @@ alt - t : chunkc tiling::window --toggle float;\
           chunkc tiling::window --grid-layout 4:4:1:1:2:2
 
 # toggle sticky
-alt - e : chunkc tiling::window --toggle sticky
+# alt - e : chunkc tiling::window --toggle sticky
 
 # toggle sticky, float and resize to picture-in-picture size
 alt - p : chunkc tiling::window --toggle sticky;\
