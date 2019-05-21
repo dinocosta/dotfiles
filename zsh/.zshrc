@@ -30,6 +30,11 @@ export ZSH=/Users/$USER/.oh-my-zsh
 source $DOTFILES/zsh/theme_light.zsh
 source $DOTFILES/functions/aliases.zsh
 
+# History.
+setopt inc_append_history
+setopt share_history
+setopt appendhistory
+
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
 # cause zsh load theme from this variable instead of
