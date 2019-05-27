@@ -19,3 +19,8 @@ set nofoldenable
 " highlight pythonWhile ctermfg=176
 set foldlevelstart=3
 setlocal colorcolumn=120
+
+" Black related configuration.
+" " Change line length to 120 characters.
+let g:black_linelength=120
+
