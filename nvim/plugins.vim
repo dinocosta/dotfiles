@@ -20,9 +20,6 @@ Plug 'jplaut/vim-arduino-ino', { 'for': 'arduino' }
 " Base 16 colorschemes.
 Plug 'chriskempson/base16-vim'
 
-" Flake8 Plugin for Vim
-Plug 'nvie/vim-flake8', { 'for': 'python' }
-
 " Vim configuration files for Elixir
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 
@@ -68,6 +65,12 @@ Plug 'plasticboy/vim-markdown'
 
 " The uncompromising Python code formatter
 Plug 'python/black', { 'for': 'python' }
+
+" Flake8 Plugin for Vim
+Plug 'nvie/vim-flake8', { 'for': 'python' }
+
+" Using the jedi autocompletion library for VIM.
+Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 
 " Add plugins to runtimepath
 call plug#end()
