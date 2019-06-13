@@ -29,4 +29,4 @@ function! ReadOnly()
     return ''
 endfunction
 
-source $HOME/Developer/dotfiles/nvim/onehalfdark.vim
+source $HOME/Developer/dotfiles/nvim/colorschemes/onehalfdark.vim
