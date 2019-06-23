@@ -27,7 +27,7 @@ export TERM='xterm-256color'
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/$USER/.oh-my-zsh
 
-source $DOTFILES/zsh/theme_light.zsh
+source $DOTFILES/zsh/theme_dark.zsh
 source $DOTFILES/functions/aliases.zsh
 
 # History.
@@ -96,7 +96,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export MANPATH="/usr/local/man:$MANPATH"
-export PATH="/opt/local/bin:/opt/local/sbin:/Users/$USER/.cabal/bin:/Applications/ghc-7.8.4.app/Contents/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texbin"
+export PATH="/opt/local/bin:/opt/local/sbin:/Users/$USER/.cabal/bin:/Applications/ghc-7.8.4.app/Contents/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/texbin:/usr/local/miniconda3/bin"
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=245"
 
