@@ -1,13 +1,13 @@
-# Panes.
-set -g pane-border-style fg=colour253
-set -g pane-active-border-style fg=colour235
+# # Panes.
+set -g pane-border-style fg=colour235
+set -g pane-active-border-style fg=colour253
 
 setw -g status-bg colour0
 setw -g status-fg colour231
 set -g status-interval 60
 set -g status-left-length 30
 set -g status-right-length 70
-set -g status-left ' '
+set -g status-left ''
 set -g window-status-current-format ' #I#[fg=blue]:#[fg=colour0]#W #[fg=colour71]#F '
 set -g status-right '#[fg=colour253]#(sysctl -n vm.loadavg | cut -d"{" -f2 | cut -d"}" -f1)\
 #[fg=default]:: #[fg=colour74]#(bash $DOTFILES/tmux/tmux-cpu.bash)\
