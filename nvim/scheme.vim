@@ -1,3 +1,5 @@
+source $HOME/Developer/dotfiles/nvim/colorschemes/onehalfdark.vim
+
 let g:currentmode={
       \ 'n'  : 'N ',
       \ 'no' : 'N·Operator Pending ',
@@ -29,4 +31,13 @@ function! ReadOnly()
     return ''
 endfunction
 
-source $HOME/Developer/dotfiles/nvim/colorschemes/onehalfdark.vim
+" StatusLine
+set laststatus=2
+set statusline=
+set statusline+=%{ChangeStatuslineColor()}                                  " Changing the statusline color
+set statusline+=%0*\ %{toupper(g:currentmode[mode()])}                      " Current mode
+set statusline+=%8*%#statusbarcolor#\ %<%f\ %{ReadOnly()}\ %m\ %w\          " File+path
+set statusline+=%9*%#statusbarcolor#\ %=                                    " Space
+set statusline+=%8*%#statusbarcolor#\ %y\                                   " FileType
+set statusline+=%7*%#statusbarcolor#\ %{(&fenc!=''?&fenc:&enc)}\[%{&ff}]\   " Encoding & Fileformat
+set statusline+=%0*\ %3p%%\ \ %l/%L:\ %3c\                                 " Rownumber/total (%)

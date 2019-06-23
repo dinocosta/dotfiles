@@ -3,19 +3,8 @@ syntax on
 set t_Co=256
 colorscheme onehalflight
 
-" StatusLine
-highlight statusbarcolor ctermfg=white ctermbg=black guibg=#383a42 guifg=#fafafa
-set laststatus=2
-set statusline=
-set statusline+=%{ChangeStatuslineColor()}                                  " Changing the statusline color
-set statusline+=%0*\ %{toupper(g:currentmode[mode()])}                      " Current mode
-set statusline+=%8*%#statusbarcolor#\ %<%F\ %{ReadOnly()}\ %m\ %w\          " File+path
-set statusline+=%9*%#statusbarcolor#\ %=                                    " Space
-set statusline+=%8*%#statusbarcolor#\ %y\                                   " FileType
-set statusline+=%7*%#statusbarcolor#\ %{(&fenc!=''?&fenc:&enc)}\[%{&ff}]\   " Encoding & Fileformat
-set statusline+=%0*\ %3p%%\ \ %l/%L:\ %3c\                                 " Rownumber/total (%)
-
 " Automatically change the statusline color depending on mode
+hi statusbarcolor ctermfg=black ctermbg=white guifg=#fafafa guibg=#383a42
 function! ChangeStatuslineColor()
   if (mode() =~# '\v(n|no)')
     exe 'hi! StatusLine ctermfg=255 ctermbg=010 guibg=#0184bc guifg=#fafafa'
