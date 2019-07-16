@@ -8,7 +8,12 @@ set -g status-interval 60
 set -g status-left-length 30
 set -g status-right-length 70
 set -g status-left ''
-set -g window-status-current-format ' #I#[fg=blue]:#[fg=colour0]#W #[fg=colour71]#F '
+
+# Current windows in status bar.
+setw -g window-status-current-style fg=colour255,bg=colour0
+set -g window-status-current-format '#[fg=colour167]#I#[fg=colour255]:#[fg=colour167]#W#[fg=colour255]#F '
+set -g window-status-format '#[fg=colour255]#[bg=colour0]#I:#W#F '
+
 set -g status-right '#[fg=colour253]#(sysctl -n vm.loadavg | cut -d"{" -f2 | cut -d"}" -f1)\
 #[fg=default]:: #[fg=colour74]#(bash $DOTFILES/tmux/tmux-cpu.bash)\
  #[fg=default]:: #[fg=colour71]#(bash $DOTFILES/tmux/tmux-battery.bash)\
@@ -17,7 +22,3 @@ set -g status-right '#[fg=colour253]#(sysctl -n vm.loadavg | cut -d"{" -f2 | cut
 
 # Windows in status bar.
 setw -g window-status-style fg=colour255,bg=colour0
-
-# Current windows in status bar.
-setw -g window-status-current-style fg=colour255,bg=colour72
-set -g window-status-current-format ' #I#[fg=colour0]:#[fg=colour255]#W#[fg=colour0]#F '
