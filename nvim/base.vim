@@ -20,9 +20,6 @@ set tags=tags;
 " Disable showmode so '--INSERT--' is not shown.
 set noshowmode
 
-" Highlights current line.
-set cursorline
-
 " Horizontal split to the bottom
 set splitbelow
 
