@@ -29,6 +29,7 @@ export ZSH=/Users/$USER/.oh-my-zsh
 
 source $DOTFILES/zsh/theme_dark.zsh
 source $DOTFILES/functions/aliases.zsh
+source $DOTFILES/functions/work_aliases.zsh
 
 # History.
 setopt inc_append_history
