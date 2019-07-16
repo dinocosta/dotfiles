@@ -55,7 +55,7 @@ window:
   decorations: none
 
   # When true, alacritty starts maximized.
-  startup_mode: Fullscreen
+  startup_mode: Maximized
 
 # Display tabs using this many cells (changes require restart)
 tabspaces: 8
@@ -70,7 +70,6 @@ font:
     family: IBM Plex Mono
     # Style can be specified to pick a specific face.
     style: Regular
-
   # The bold font face
   bold:
     family: IBM Plex Mono
@@ -430,10 +429,6 @@ key_bindings:
   - { key: D,        mods: Command,       chars: "\x01\x5c"              }
   - { key: D,        mods: Command|Shift, chars: "\x01\x2d"              }
   - { key: W,        mods: Command,       chars: "\x01\x78"              }
-  - { key: H,        mods: Command,       chars: "\x01\x68"              }
-  - { key: J,        mods: Command,       chars: "\x01\x6a"              }
-  - { key: K,        mods: Command,       chars: "\x01\x6b"              }
-  - { key: L,        mods: Command,       chars: "\x01\x6c"              }
   - { key: T,        mods: Command,       chars: "\x01\x63"              }
   - { key: P,        mods: Command,       chars: "\x01\x70"              }
   - { key: N,        mods: Command,       chars: "\x01\x6e"              }
@@ -447,7 +442,11 @@ key_bindings:
   - { key: Key7,     mods: Command,       chars: "\x01\x37"              }
   - { key: Key8,     mods: Command,       chars: "\x01\x38"              }
   - { key: Key9,     mods: Command,       chars: "\x01\x39"              }
-  - { key: Left,     mods: Command,       chars: "\x01\x68"              }
-  - { key: Down,     mods: Command,       chars: "\x01\x6a"              }
-  - { key: Up,       mods: Command,       chars: "\x01\x6b"              }
-  - { key: Right,    mods: Command,       chars: "\x01\x6c"              }
+  - { key: H,        mods: Command,       chars: "\x01\x1b\x5b\x44"      }
+  - { key: J,        mods: Command,       chars: "\x01\x1b\x5b\x42"      }
+  - { key: K,        mods: Command,       chars: "\x01\x1b\x5b\x41"      }
+  - { key: L,        mods: Command,       chars: "\x01\x1b\x5b\x43"      }
+  - { key: H,        mods: Command|Shift,       chars: "\x01\x68"        }
+  - { key: J,        mods: Command|Shift,       chars: "\x01\x6a"        }
+  - { key: K,        mods: Command|Shift,       chars: "\x01\x6b"        }
+  - { key: L,        mods: Command|Shift,       chars: "\x01\x6c"        }
