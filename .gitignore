@@ -1,5 +1,5 @@
 # Ignore work related functions.
-functions/work.zsh
+functions/work_aliases.zsh
 
 # Ignore DS Store
 .DS_Store
