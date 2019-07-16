@@ -3,3 +3,6 @@ functions/work_aliases.zsh
 
 # Ignore DS Store
 .DS_Store
+
+# Ignore Karabiner backups
+Karabiner/automatic_backups
