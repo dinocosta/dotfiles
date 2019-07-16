@@ -72,6 +72,9 @@ Plug 'nvie/vim-flake8', { 'for': 'python' }
 " Using the jedi autocompletion library for VIM.
 Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 
+" Open selected text in https://carbon.now.sh.
+Plug 'kristijanhusak/vim-carbon-now-sh'
+
 " Add plugins to runtimepath
 call plug#end()
 
