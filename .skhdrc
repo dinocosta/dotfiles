@@ -213,18 +213,19 @@ ctrl + alt - s : chunkc tiling::desktop --layout monocle
 ctrl + alt - d : chunkc tiling::desktop --layout float
 ctrl + alt - w : chunkc tiling::desktop --deserialize ~/.chunkwm_layouts/dev_1
 
+
+# Move window to another region.
+shift + cmd - h : chunkc tiling::window --warp west
+shift + cmd - j : chunkc tiling::window --warp south
+shift + cmd - k : chunkc tiling::window --warp north
+shift + cmd - l : chunkc tiling::window --warp east
+
 # This is the list of all unused configurations that came on the default
 # configuration. I'm keeping it here so that I can look at the list of commands
 # if I ever need it again.
 #
 # cmd - j : chunkc tiling::window --focus prev
 # shift + cmd - j : chunkc tiling::window --focus next
-#
-# --> Move window to another desktop.
-# shift + cmd - h : chunkc tiling::window --warp west
-# shift + cmd - j : chunkc tiling::window --warp south
-# shift + cmd - k : chunkc tiling::window --warp north
-# shift + cmd - l : chunkc tiling::window --warp east
 #
 # --> Go to monitor using numbers.
 # ctrl + alt - 1  : chunkc tiling::monitor -f 1
