@@ -166,6 +166,9 @@ let g:netrw_sort_sequence = '[\/]$,*'
 " Ignore .pyc files.
 let NERDTreeIgnore = ['\.pyc$']
 
+" Hide statusline.
+let g:NERDTreeStatusline = '%#NonText#'
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " UtilSnips
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
