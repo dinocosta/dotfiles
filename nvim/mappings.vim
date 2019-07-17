@@ -30,6 +30,12 @@ nnoremap \ :Ag<SPACE>
 " Old EasyMotion keybinding
 map <Leader> <Plug>(easymotion-prefix)
 
+" Save file using Leader+w.
+nnoremap <Leader>w :w<CR>
+
+" Quit vim using Leader+q.
+nnoremap <Leader>q :q<CR>
+
 " Buffers
 "
 " Move to the previous buffer with "gp"
