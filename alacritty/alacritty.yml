@@ -450,3 +450,13 @@ key_bindings:
   - { key: J,        mods: Command|Shift,       chars: "\x01\x6a"        }
   - { key: K,        mods: Command|Shift,       chars: "\x01\x6b"        }
   - { key: L,        mods: Command|Shift,       chars: "\x01\x6c"        }
+
+  # Rotate tmux pane usign Cmd + [/].
+
+  # Using Cmd + [ send the key combo: Ctrl+A -> {. This switches the current
+  # tmux pane with the one on the left.
+  - { key: LBracket, mods: Command,       chars: "\x01\x7b"              }
+
+  # Using Cmd + ] send the key combo: Ctrl+A -> }. This switches the current
+  # tmux pane with the one on the right.
+  - { key: RBracket, mods: Command,       chars: "\x01\x7d"              }
