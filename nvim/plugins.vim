@@ -59,6 +59,9 @@ Plug 'rizzatti/dash.vim'
 " 🌷 Distraction-free writing in Vim
 Plug 'junegunn/goyo.vim'
 
+" 🔦 All the world's indeed a stage and we are merely players.
+Plug 'junegunn/limelight.vim'
+
 " Markdown plugins.
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -175,3 +178,22 @@ let g:NERDTreeStatusline = '%#NonText#'
 let g:UltiSnipsExpandTrigger="<C-j>"
 let g:UltiSnipsJumpForwardTrigger="<C-j>"
 let g:UltiSnipsJumpBackwardTrigger="<C-k>"
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Goyo
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Function to be run when entering Goyo.
+function! s:goyo_enter()
+  set conceallevel=0
+  Limelight
+endfunction
+
+" Function to be run when exiting Goyo.
+function! s:goyo_leave()
+  Limelight!
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
