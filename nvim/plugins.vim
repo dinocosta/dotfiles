@@ -11,8 +11,8 @@ Plug 'Yggdroot/indentLine'
 " Vim plugin, provides insert mode auto-completion for quotes, parens, brackets, etc.
 Plug 'Raimondi/delimitMate'
 
-" A collection of syntax definitions not yet shipped with stock vim.
-Plug 'justinmk/vim-syntax-extra'
+" A solid language pack for Vim.
+Plug 'sheerun/vim-polyglot'
 
 " Arduino on Vim.
 Plug 'jplaut/vim-arduino-ino', { 'for': 'arduino' }
@@ -77,6 +77,9 @@ Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 
 " Open selected text in https://carbon.now.sh.
 Plug 'kristijanhusak/vim-carbon-now-sh'
+
+" unimpaired.vim: Pairs of handy bracket mappings.
+Plug 'tpope/vim-unimpaired'
 
 " Add plugins to runtimepath
 call plug#end()
