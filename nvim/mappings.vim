@@ -38,33 +38,11 @@ nnoremap <Leader>q :q<CR>
 
 " Buffers
 "
-" Move to the previous buffer with "gp"
-nnoremap gp :bp<CR>
-" Move to the next buffer with "gn"
-nnoremap gn :bn<CR>
 " List all possible buffers with "gl"
 nnoremap gl :Buffers<CR>
-" List all possible buffers with "gb" and accept a new buffer argument [1]
-nnoremap gb :ls<CR>:b
 
-" Toggle L with Ctrl-E
-function! ToggleLExplorer()
-  if exists("t:expl_buf_num")
-      let expl_win_num = bufwinnr(t:expl_buf_num)
-      if expl_win_num != -1
-          let cur_win_nr = winnr()
-          exec expl_win_num . 'wincmd w'
-          close
-          exec cur_win_nr . 'wincmd w'
-          unlet t:expl_buf_num
-      else
-          unlet t:expl_buf_num
-      endif
-  else
-      exec '1wincmd w'
-      Lexplore
-      let t:expl_buf_num = bufnr("%")
-  endif
-endfunction
-map <silent> <C-E> :call ToggleLExplorer()<CR>
+" Close quickfix window with Leader+x.
+map <Leader>x :cclose<CR>
+
+" Toogle NERDTree with Ctrl+N.
 map <silent> <C-N> :NERDTreeToggle<CR>
