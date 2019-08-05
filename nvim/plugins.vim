@@ -20,6 +20,9 @@ Plug 'jplaut/vim-arduino-ino', { 'for': 'arduino' }
 " Base 16 colorschemes.
 Plug 'chriskempson/base16-vim'
 
+" Gruvbox.
+Plug 'morhetz/gruvbox'
+
 " Vim configuration files for Elixir
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 
@@ -80,6 +83,9 @@ Plug 'kristijanhusak/vim-carbon-now-sh'
 
 " unimpaired.vim: Pairs of handy bracket mappings.
 Plug 'tpope/vim-unimpaired'
+
+" Add plist editing support to Vim.
+Plug 'darfink/vim-plist'
 
 " Add plugins to runtimepath
 call plug#end()

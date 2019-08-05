@@ -1,4 +1,4 @@
-source $HOME/Developer/dotfiles/nvim/colorschemes/onehalfdark.vim
+source $HOME/Developer/dotfiles/nvim/colorschemes/gruvboxdark.vim
 
 let g:currentmode={
       \ 'n'  : 'N ',
