@@ -23,6 +23,9 @@ Plug 'chriskempson/base16-vim'
 " Gruvbox.
 Plug 'morhetz/gruvbox'
 
+" A dark Vim/Neovim color scheme inspired by Atom's One Dark syntax theme.
+Plug 'joshdick/onedark.vim'
+
 " Vim configuration files for Elixir
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 

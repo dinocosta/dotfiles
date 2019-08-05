@@ -6,6 +6,7 @@ let g:gruvbox_contrast_dark='hard'
 colorscheme gruvbox
 
 " Automatically change the statusline color depending on mode
+hi statusbarcolor ctermfg=black ctermbg=white guifg=#ebdbb2 guibg=#282828
 function! ChangeStatuslineColor()
   if (mode() =~# '\v(n|no)')
     exe 'hi! StatusLine guifg=#ebdbb2 guibg=#282828'
