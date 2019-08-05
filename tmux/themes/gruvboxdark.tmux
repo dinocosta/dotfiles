@@ -10,8 +10,8 @@ set -g status-right-length 70
 set -g status-left ''
 
 # Current windows in status bar.
-setw -g window-status-current-style fg="#98971a",bg="#1d2021"
-set -g window-status-current-format '#I#[fg=default]:#[fg=#98971a]#W#[fg=colour255]#F '
+setw -g window-status-current-style fg="#d79921",bg="#1d2021"
+set -g window-status-current-format '#I#[fg=default]:#[fg=#d79921]#W#[fg=colour255]#F '
 set -g window-status-format '#[fg=default]#[bg=#1d2021]#I:#W#F '
 
 set -g status-right '#[fg=default]#(sysctl -n vm.loadavg | cut -d"{" -f2 | cut -d"}" -f1)\
