@@ -51,3 +51,6 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
+
+" Change color of vertical split separator for NerdTree.
+hi VertSplit guifg=#abb2bf
