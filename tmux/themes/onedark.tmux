@@ -28,13 +28,12 @@ set -g window-status-current-format '#[fg=colour167]#I#[fg=colour255]:#[fg=colou
 
 # Windows in status bar.
 setw -g window-status-style fg=$GRAY,bg=$BLACK
-set -g window-status-format '#I#[fg=default]:#[fg=#{GRAY}]#W#F '
-
-# Window with activity.
-set -g window-status-activity-style bg=$RED,fg=$WHITE
+set -g window-status-format '#I#[fg=default]:#[fg=#{GRAY}]#W#[fg=#{RED}]#F '
 
 set -g status-right '#[fg=#{GRAY}]#(sysctl -n vm.loadavg | cut -d"{" -f2 | cut -d"}" -f1)\
 #[fg=default]:: #[fg=#{BLUE}]#(bash $DOTFILES/tmux/tmux-cpu.bash)\
  #[fg=default]:: #[fg=#{GREEN}]#(bash $DOTFILES/tmux/tmux-battery.bash)\
  #[fg=default]:: #[fg=#{RED}]#($DOTFILES/tmux/osx-cpu-temp)\
 #[fg=#{GRAY}] | %a %d/%m - %H:%M '
+
+set-option -gw window-status-activity-style bg=$BLACK
