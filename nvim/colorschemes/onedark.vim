@@ -4,7 +4,7 @@ set t_Co=256
 colorscheme onedark
 
 " Automatically change the statusline color depending on mode
-hi statusbarcolor ctermfg=black ctermbg=white guifg=#fafafa guibg=#282c34
+hi statusbarcolor ctermfg=black ctermbg=white guifg=#282c34 guibg=#abb2bf
 function! ChangeStatuslineColor()
   if (mode() =~# '\v(n|no)')
     exe 'hi! StatusLine ctermfg=010 ctermbg=000 guibg=#61afef guifg=#282c34'
