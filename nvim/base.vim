@@ -93,6 +93,9 @@ set timeoutlen=300
 " Open diffs with vertical splits.
 set diffopt+=vertical
 
+" Highlight current line.
+set cursorline
+
 " yank to clipboard
 if has ("clipboard")
   set clipboard=unnamed " copy to the system clipboard
