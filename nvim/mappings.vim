@@ -46,3 +46,6 @@ map <Leader>x :cclose<CR>
 
 " Toogle NERDTree with Ctrl+N.
 map <silent> <C-N> :NERDTreeToggle<CR>
+
+" Toggle fugitive window with Leader+g.
+nnoremap <Leader>g :G<CR>
