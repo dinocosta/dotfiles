@@ -34,8 +34,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
-" Spotify integration for vim
-Plug 'HendrikPetertje/vimify'
 
 " Dark powered asynchronous completion framework for neovim/Vim8
 Plug 'Shougo/deoplete.nvim'
@@ -89,6 +87,12 @@ Plug 'tpope/vim-unimpaired'
 
 " Add plist editing support to Vim.
 Plug 'darfink/vim-plist'
+
+" Adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP, unite, Denite, lightline, vim-startify and many more.
+Plug 'ryanoasis/vim-devicons'
+
+" Functions for taking the monotony out of building your own fancy statusline in Vim
+Plug 'rbong/vim-crystalline'
 
 " Add plugins to runtimepath
 call plug#end()
