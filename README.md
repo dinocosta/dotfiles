@@ -22,6 +22,7 @@ the project, run:
 After installation you'll still need to manually install the following:
 
 * [Input Mono Font](http://input.fontbureau.com/download/?customize&fontSelection=whole&a=ss&g=ss&i=0&l=0&zero=0&asterisk=height&braces=straight&preset=default&line-height=1.2&email=)
+* [SauceCodePro Nerd Font](https://github.com/ryanoasis/nerd-fonts)
 * [Videostream](https://getvideostream.com/download/#)
 * [Calibre Kobo Utilities Plugin](https://www.mobileread.com/forums/showthread.php?t=215339)
 * [Wallpaper](https://cdn.vox-cdn.com/uploads/chorus_asset/file/13272831/The_Verge_Hysteresis_Wallpaper_Landscape.0.png)
