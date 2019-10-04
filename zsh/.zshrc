@@ -36,6 +36,15 @@ setopt inc_append_history
 setopt share_history
 setopt appendhistory
 
+# Load zplug.
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
+# Plugins
+zplug "geometry-zsh/geometry"
+zplug load
+
+
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
 # cause zsh load theme from this variable instead of
@@ -136,6 +145,7 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source "/Users/dino.costa/Library/Application Support/creds/nexus"
 export PATH="/usr/local/opt/mongodb@3.2/bin:$PATH"
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Real vim
 alias bim="vim"
