@@ -150,19 +150,20 @@ shift + alt - left   : chunkc tiling::window --grid-layout 1:2:0:0:1:1
 shift + alt - right  : chunkc tiling::window --grid-layout 1:2:1:0:1:1
 
 # increase region size
-shift + alt - a : chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge west
-shift + alt - s : chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge south
-shift + alt - w : chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge north
-shift + alt - d : chunkc tiling::window --use-temporary-ratio 0.1 --adjust-window-edge east
+shift + alt - a : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge west
+shift + alt - s : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge south
+shift + alt - w : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge north
+shift + alt - d : chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge east
 
 # decrease region size
-shift + cmd - a : chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge west
-shift + cmd - s : chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge south
-shift + cmd - w : chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge north
+shift + cmd - a : chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge west
+shift + cmd - s : chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge south
+shift + cmd - w : chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge north
 shift + cmd - d [
   # Prevents the shortcut from working on Alacritty, meaning that it can be used on alacritty.
   "alacritty" ~
-  *           : chunkc tiling::window --use-temporary-ratio -0.1 --adjust-window-edge east
+  "iterm2" ~
+  *           : chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge east
 ]
 
 # set insertion point for focused container
@@ -217,18 +218,22 @@ ctrl + alt - w : chunkc tiling::desktop --deserialize ~/.chunkwm_layouts/dev_1
 # Move window to another region.
 shift + cmd - h [
   "alacritty" ~
+  "iterm2" ~
   * : chunkc tiling::window --warp west
 ]
 shift + cmd - j [
   "alacritty" ~
+  "iterm2" ~
   * : chunkc tiling::window --warp south
 ]
 shift + cmd - k [
   "alacritty" ~
+  "iterm2" ~
   * : chunkc tiling::window --warp north
 ]
 shift + cmd - l [
   "alacritty" ~
+  "iterm2" ~
   * : chunkc tiling::window --warp east
 ]
 
