@@ -13,3 +13,8 @@ alias tks="tmux kill-session -t"
 alias gd="git difftool"
 alias vimdiff="nvim -d"
 alias kubectl="KUBE_EDITOR=nvim kubectl"
+
+# Use bat whenever calling cat.
+# However still enable cat by using catnotbat.
+alias cat="bat"
+alias catnotbat="cat"
