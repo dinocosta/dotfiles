@@ -48,11 +48,12 @@ function! StatusLine(current, width)
   if a:current
     let l:s .= crystalline#mode() . crystalline#right_mode_sep('')
   else
-    let l:s .= '%#CrystallineInactive#'
+    let l:s .= crystalline#mode() . '%#Fill#'
   endif
+
   let l:s .= ' %f%h%w%m%r '
   if a:current
-    let l:s .= crystalline#right_sep('', 'Fill') . ' %{fugitive#head()}'
+    let l:s .= crystalline#right_sep('', 'Normal') . ' %{fugitive#head()}'
   endif
 
   let l:s .= '%='
@@ -60,6 +61,7 @@ function! StatusLine(current, width)
     let l:s .= crystalline#left_sep('', 'Fill') . ' %{&paste ?"PASTE ":""}%{&spell?"SPELL ":""}'
     let l:s .= crystalline#left_mode_sep('')
   endif
+
   if a:width > 80
     let l:s .= ' %{&ft} %l/%L %c%V %P '
   else
