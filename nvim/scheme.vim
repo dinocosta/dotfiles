@@ -76,3 +76,6 @@ let g:crystalline_statusline_fn = 'StatusLine'
 let g:crystalline_theme = 'onedark'
 
 set laststatus=2
+
+" Make comments italic.
+hi Comment cterm=italic gui=italic
