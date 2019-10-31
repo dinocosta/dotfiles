@@ -10,30 +10,32 @@ PURPLE="#c678dd"
 CYAN="#56b6c2"
 GRAY="#abb2bf"
 WHITE="#ffffff"
+LIGHT_GRAY="#2C323C"
 
 # Panes.
-set -g pane-border-style fg=colour235
-set -g pane-active-border-style fg=$GRAY
+set -g pane-border-style fg=$LIGHT_GRAY
+set -g pane-active-border-style fg=$WHITE
 
-setw -g status-bg colour0
-setw -g status-fg colour231
+setw -g status-bg $LIGHT_GRAY
+setw -g status-fg $BLACK
 set -g status-interval 60
 set -g status-left-length 30
 set -g status-right-length 70
 set -g status-left ''
 
 # Current windows in status bar.
-setw -g window-status-current-style fg=$GRAY,bg=colour0
-set -g window-status-current-format '#[fg=colour167]#I#[fg=colour255]:#[fg=colour167]#W#[fg=colour255]#F '
+setw -g window-status-current-style fg=$GRAY,bg=$RED
+set -g window-status-current-format ' #[fg=#{BLACK}]#I#[fg=#{WHITE}]:#[fg=#{BLACK}]#W#[fg=colour255]#F '
 
 # Windows in status bar.
-setw -g window-status-style fg=$GRAY,bg=$BLACK
-set -g window-status-format '#I#[fg=default]:#[fg=#{GRAY}]#W#[fg=#{RED}]#F '
+setw -g window-status-style fg=$GRAY,bg=$LIGHT_GRAY
+set -g window-status-format ' #I#[fg=#{RED}]:#[fg=#{GRAY}]#W#[fg=#{RED}]#F '
 
-set -g status-right '#[fg=#{GRAY}]#(sysctl -n vm.loadavg | cut -d"{" -f2 | cut -d"}" -f1)\
-#[fg=default]:: #[fg=#{BLUE}]#(bash $DOTFILES/tmux/tmux-cpu.bash)\
- #[fg=default]:: #[fg=#{GREEN}]#(bash $DOTFILES/tmux/tmux-battery.bash)\
- #[fg=default]:: #[fg=#{RED}]#($DOTFILES/tmux/osx-cpu-temp)\
-#[fg=#{GRAY}] | %a %d/%m - %H:%M '
+set -g status-right '#[fg=#{WHITE}]#(sysctl -n vm.loadavg | cut -d"{" -f2 | cut -d"}" -f1)\
+#[fg=#{GRAY}]:: #[fg=#{BLUE}]#(bash $DOTFILES/tmux/tmux-cpu.bash)\
+ #[fg=#{GRAY}]:: #[fg=#{GREEN}]#(bash $DOTFILES/tmux/tmux-battery.bash)\
+ #[fg=#{GRAY}]:: #[fg=#{RED}]#($DOTFILES/tmux/osx-cpu-temp)\
+#[fg=#{WHITE}] | %a %d/%m - %H:%M '
 
-set-option -gw window-status-activity-style bg=$BLACK
+# Window Status style whenever bell rings.
+set-option -gw window-status-activity-style bg=$LIGHT_GRAY
