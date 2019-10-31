@@ -2,7 +2,7 @@
 	email = dinojoaocosta@gmail.com
 	name = joaofcosta
 [core]
-	excludesfile = /Users/joaocosta/.gitignore
+	excludesfile = ~/.gitignore
 	editor = nvim
 [difftool]
 	prompt = false
