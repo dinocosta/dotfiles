@@ -53,7 +53,7 @@ function! StatusLine(current, width)
 
   let l:s .= ' %f%h%w%m%r '
   if a:current
-    let l:s .= crystalline#right_sep('', 'Normal') . ' %{fugitive#head()}'
+    let l:s .= crystalline#right_sep('', 'Normal') . ' '
   endif
 
   let l:s .= '%='

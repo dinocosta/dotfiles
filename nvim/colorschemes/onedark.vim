@@ -47,7 +47,7 @@ let g:fzf_colors =
   \ 'info':    ['fg', 'PreProc'],
   \ 'border':  ['fg', 'Ignore'],
   \ 'prompt':  ['fg', 'Function'],
-  \ 'pointer': ['fg', 'Keyword'],
+  \ 'pointer': ['fg', 'Keyword', 'bg', 'CursorLine'],
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }

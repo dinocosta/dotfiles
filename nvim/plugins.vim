@@ -57,9 +57,6 @@ Plug 'honza/vim-snippets'
 " Go development plugin for Vim.
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
-" Search Dash.app from Vim
-Plug 'rizzatti/dash.vim'
-
 " 🌷 Distraction-free writing in Vim
 Plug 'junegunn/goyo.vim'
 
@@ -96,9 +93,6 @@ Plug 'rbong/vim-crystalline'
 
 " Add plugins to runtimepath
 call plug#end()
-
-" ==> Vimify
-let g:spotify_token='NmExYjA4YjQ5YTc3NGNjOWFiMDgzOWMyYmFkNGQxMmI6YTA4Y2MzMDdjNjg3NDY1ZGI0MGE2MzBmZDI0MWI0ZDM='
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
