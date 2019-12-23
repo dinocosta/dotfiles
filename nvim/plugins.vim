@@ -66,6 +66,7 @@ Plug 'junegunn/limelight.vim'
 " Markdown plugins.
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
 
 " The uncompromising Python code formatter
 Plug 'python/black', { 'for': 'python' }
@@ -212,3 +213,10 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 " crystalline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:crystalline_separators=['', '']
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" markdown-preview.nvim
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:mkdp_refresh_slow=1
+autocmd FileType markdown set conceallevel=0
