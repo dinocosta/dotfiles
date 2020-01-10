@@ -31,11 +31,13 @@ set -g window-status-current-format ' #[fg=#{BLACK}]#I#[fg=#{WHITE}]:#[fg=#{BLAC
 setw -g window-status-style fg=$GRAY,bg=$LIGHT_GRAY
 set -g window-status-format ' #I#[fg=#{RED}]:#[fg=#{GRAY}]#W#[fg=#{RED}]#F '
 
-set -g status-right '#[fg=#{WHITE}]#(sysctl -n vm.loadavg | cut -d"{" -f2 | cut -d"}" -f1)\
-#[fg=#{GRAY}]:: #[fg=#{BLUE}]#(bash $DOTFILES/tmux/tmux-cpu.bash)\
- #[fg=#{GRAY}]:: #[fg=#{GREEN}]#(bash $DOTFILES/tmux/tmux-battery.bash)\
- #[fg=#{GRAY}]:: #[fg=#{RED}]#($DOTFILES/tmux/osx-cpu-temp)\
-#[fg=#{WHITE}] | %a %d/%m - %H:%M '
+set -g status-right-style bg=$GRAY
+set -g status-right '#[bg=#{LIGHT_GRAY}]\
+#[fg=#{GRAY}]#(sysctl -n vm.loadavg | cut -d"{" -f2 | cut -d"}" -f1)\
+#[fg=#{WHITE}]:: #[fg=#{BLUE}]#(bash $DOTFILES/tmux/tmux-cpu.bash)\
+ #[fg=#{WHITE}]:: #[fg=#{GREEN}]#(bash $DOTFILES/tmux/tmux-battery.bash)\
+ #[fg=#{WHITE}]:: #[fg=#{RED}]#($DOTFILES/tmux/osx-cpu-temp)\
+ #[fg=#{BLACK}] #[bg=#{GRAY}] %a %d/%m - %H:%M '
 
 # Window Status style whenever bell rings.
 set-option -gw window-status-activity-style bg=$LIGHT_GRAY
