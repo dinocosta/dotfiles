@@ -120,3 +120,12 @@ set listchars+=nbsp:⣿
 " that's where the undo files will be created.
 set undofile
 set undodir=~/.vim/undodir
+
+" Automtically remove CursorLine whenever the split is not in focus.
+augroup CursorLine
+    au!
+    au VimEnter * setlocal cursorline
+    au WinEnter * setlocal cursorline
+    au BufWinEnter * setlocal cursorline
+    au WinLeave * setlocal nocursorline
+augroup END
