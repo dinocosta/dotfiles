@@ -67,18 +67,18 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: JetBrains Mono
+    family: JetBrainsMono Nerd Font
     # Style can be specified to pick a specific face.
     style: Regular
   # The bold font face
   bold:
-    family: JetBrains Mono
+    family: JetBrainsMono Nerd Font
     # Style can be specified to pick a specific face.
     style: Regular
 
   # The italic font face
   italic:
-    family: JetBrains Mono
+    family: JetBrainsMono Nerd Font
     # Style can be specified to pick a specific face.
     style: Italic
 
@@ -517,7 +517,7 @@ key_bindings:
   - { key: Slash,    mods: Command, chars: "\x01\x5b"                    }
   # The following key bindings allows us to use iTerm2 shortcuts on
   # Tmux.
-  - { key: D,        mods: Command,       chars: "\x01\x5c"              }
+  - { key: D,        mods: Command,       chars: "\x01\x25"              }
   - { key: D,        mods: Command|Shift, chars: "\x01\x2d"              }
   - { key: W,        mods: Command,       chars: "\x01\x78"              }
   - { key: T,        mods: Command,       chars: "\x01\x63"              }
