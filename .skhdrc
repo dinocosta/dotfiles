@@ -328,7 +328,7 @@ shift + cmd - j [
 ]
 shift + cmd - k [
   "alacritty" ~
-  * : yabai -m window --warp northe
+  * : yabai -m window --warp north
 ]
 shift + cmd - l [
   "alacritty" ~
