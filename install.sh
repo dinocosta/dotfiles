@@ -151,17 +151,6 @@ else
   pp_success "NeoVim already installed."
 fi
 
-# Chunkwm.
-if ! command -v chunkwm > /dev/null 2>&1; then
-  pp_info "Installing chunkwm..."
-  brew tap koekeishiya/formulae
-  brew install chunkwm
-  brew services start chunkwm
-  pp_success "Successfully installed chunkwm."
-else
-  pp_success "chunkwm already installed."
-fi
-
 # skhd.
 if ! command -v skhd > /dev/null 2>&1; then
   pp_info "Installing skhd..."
@@ -274,13 +263,13 @@ rm $HOME/.zshrc
 ln -s $DOTFILES/zsh/.zshrc $HOME/.zshrc
 pp_success "ZSH configuration updated."
 
-# Link chunkwm configuration.
-pp_info "Updating chunkwm configuraiton..."
-rm $HOME/.chunkwmrc
-rm -rf $HOME/.chunkwm_plugins
-ln -s $DOTFILES/chunkwm/.chunkwmrc $HOME/.chunkwmrc
-dirlink chunkwm/.chunkwm_plugins ~
-pp_success "chunkwm configuration updated."
+# Link yabai configuration.
+pp_info "Updating yabai configuraiton..."
+if test -f "$HOME/.yabairc"; then
+  rm $HOME/.yabairc
+fi
+ln -s $DOTFILES/yabairc $HOME/.yabairc
+pp_success "yabai configuration updated."
 
 # Link skhd configuration.
 pp_info "Updating skhd configuraiton..."
