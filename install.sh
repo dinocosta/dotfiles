@@ -114,6 +114,15 @@ else
   pp_success "ZSH is already installed."
 fi
 
+# zplug.
+if ! command -v zplug > /dev/null 2>&1; then
+  pp_info "Installing zplug..."
+  brew install zplug
+  pp_success "zplug installed."
+else
+  pp_success "zplug is already installed."
+fi
+
 # Python 2.7.
 if [[ "$(which python)" != "/usr/local/bin/python" ]]; then
 	pp_info "Installing system python 2.7 for NeoVim..."
