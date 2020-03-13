@@ -28,5 +28,6 @@ After installation you'll still need to manually install the following:
 * [Wallpaper](https://cdn.vox-cdn.com/uploads/chorus_asset/file/13272831/The_Verge_Hysteresis_Wallpaper_Landscape.0.png)
 * [Installing TMUX Plugins with TPM](https://github.com/tmux-plugins/tpm#installing-plugins)
 * [Change CGFontRenderingFontSmoothingDisabled](https://angristan.xyz/how-to-fix-font-rendering-macos-10-14-mojave/)
+* [Epoch Clock Screensaver](https://github.com/chrstphrknwtn/epoch-flip-clock-screensaver/)
 
 Finally enable Reduce Motion on MacOS: `System Preferences > Accessibility > Display > Reduce Motion`.
