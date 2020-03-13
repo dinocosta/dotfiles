@@ -53,5 +53,6 @@ disable SIP in order to install, so please follow
 * [Installing TMUX Plugins with TPM](https://github.com/tmux-plugins/tpm#installing-plugins)
 * [Change CGFontRenderingFontSmoothingDisabled](https://angristan.xyz/how-to-fix-font-rendering-macos-10-14-mojave/)
 * [Epoch Clock Screensaver](https://github.com/chrstphrknwtn/epoch-flip-clock-screensaver/)
+* [Vimari](https://github.com/televator-apps/vimari)
 
 Finally enable Reduce Motion on MacOS: `System Preferences > Accessibility > Display > Reduce Motion`.
