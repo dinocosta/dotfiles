@@ -426,8 +426,8 @@ install_app "Vanilla" "brew cask install vanilla"
 # DevDocs.
 install_app "DevDocs" "brew cask install devdocs"
 
-# Clipy.
-install_app "Clipy" "brew cask install clipy"
+# Maccy.
+install_app "Maccy" "brew cask install maccy"
 
 # Videostream.
 install_app "Videostream" "brew cask install videostream"
