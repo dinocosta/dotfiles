@@ -55,4 +55,4 @@ disable SIP in order to install, so please follow
 * [Epoch Clock Screensaver](https://github.com/chrstphrknwtn/epoch-flip-clock-screensaver/)
 * [Vimari](https://github.com/televator-apps/vimari)
 
-Finally enable Reduce Motion on MacOS: `System Preferences > Accessibility > Display > Reduce Motion`.
+Lastly copy all the apps inside the `apps` folder to `/Applications`.
