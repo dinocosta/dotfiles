@@ -426,8 +426,11 @@ install_app "Vanilla" "brew cask install vanilla"
 # DevDocs.
 install_app "DevDocs" "brew cask install devdocs"
 
-# Maccy.
+# Maccy & Maccy Configuration.
 install_app "Maccy" "brew cask install maccy"
+defaults write org.p0deje.Maccy pasteByDefault true
+defaults write org.p0deje.Maccy hotKey command+shift+v
+defaults write org.p0deje.Maccy historySize 100
 
 # Videostream.
 install_app "Videostream" "brew cask install videostream"
