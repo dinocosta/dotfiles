@@ -51,7 +51,7 @@ function! StatusLine(current, width)
     let l:s .= crystalline#mode() . '%#Fill#'
   endif
 
-  let l:s .= ' %f%h%w%m%r '
+  let l:s .= ' %t%h%w%m%r '
   if a:current
     let l:s .= crystalline#right_sep('', 'Normal') . ' '
   endif

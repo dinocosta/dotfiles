@@ -17,8 +17,7 @@ Plug 'sheerun/vim-polyglot'
 " Arduino on Vim.
 Plug 'jplaut/vim-arduino-ino', { 'for': 'arduino' }
 
-" Base 16 colorschemes.
-Plug 'chriskempson/base16-vim'
+" Base 16 colorschemes.  Plug 'chriskempson/base16-vim'
 
 " Gruvbox.
 Plug 'morhetz/gruvbox'
@@ -36,7 +35,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
 " Dark powered asynchronous completion framework for neovim/Vim8
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim', { 'do':  'UpdateRemotePlugins' }
 
 " Elixir Integration Into Vim
 Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
@@ -68,9 +67,6 @@ Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
 
-" The uncompromising Python code formatter
-Plug 'python/black', { 'for': 'python' }
-
 " Flake8 Plugin for Vim
 Plug 'nvie/vim-flake8', { 'for': 'python' }
 
@@ -92,6 +88,9 @@ Plug 'ryanoasis/vim-devicons'
 " Functions for taking the monotony out of building your own fancy statusline in Vim
 Plug 'rbong/vim-crystalline'
 
+" simple vim plugin to make http requests from buffers.
+Plug 'nicwest/vim-http'
+
 " Add plugins to runtimepath
 call plug#end()
 
@@ -101,7 +100,6 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_complete_delay = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Emmet
@@ -220,3 +218,11 @@ let g:crystalline_separators=['', '']
 
 let g:mkdp_refresh_slow=1
 autocmd FileType markdown set conceallevel=0
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" alchemist
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Make alchemist use Ctrl-[ instead of Ctrl-] because that's vim defaults for
+" CTags.
+let g:alchemist_tag_map = '<C-[>'

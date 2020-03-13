@@ -302,9 +302,10 @@ else
   pp_success "zsh-autosuggestions already installed."
 fi
 
-# install geometry theme.
-pp_info "Installing geometry ZSH theme..."
-(cd $HOME/.oh-my-zsh/custom/themes && git clone https://github.com/geometry-zsh/geometry.git)
+# install spaceship theme.
+pp_info "Installing spaceship ZSH theme..."
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 pp_success "Succesfully installed geomtry ZSH theme."
 
 # git.
