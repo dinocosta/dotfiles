@@ -517,7 +517,7 @@ key_bindings:
   - { key: Slash,    mods: Command, chars: "\x01\x5b"                    }
   # The following key bindings allows us to use iTerm2 shortcuts on
   # Tmux.
-  - { key: D,        mods: Command,       chars: "\x01\x25"              }
+  - { key: D,        mods: Command,       chars: "\x01\x7c"              }
   - { key: D,        mods: Command|Shift, chars: "\x01\x2d"              }
   - { key: W,        mods: Command,       chars: "\x01\x78"              }
   - { key: T,        mods: Command,       chars: "\x01\x63"              }
