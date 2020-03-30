@@ -181,6 +181,11 @@ let NERDTreeIgnore = ['\.pyc$']
 " Hide statusline.
 let g:NERDTreeStatusline = '%#NonText#'
 
+" Remove space between arrow icon and folder icon.
+let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
+let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " UtilSnips
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
