@@ -141,7 +141,10 @@ command! -bang -nargs=* Ag
 
 " Removes the bar at the bottom that says fzf while fzf is running.
 autocmd! FileType fzf
-autocmd  FileType fzf set laststatus=0 noshowmode noruler | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+" Disables the indent lines plugin in the FZF window.
+autocmd FileType fzf :IndentLinesDisable
+" Disables relativenumbers in FZF windows and other shenanigans.
+autocmd FileType fzf set laststatus=0 noshowmode noruler norelativenumber | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GitGutter
