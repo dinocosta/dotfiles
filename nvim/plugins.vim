@@ -17,7 +17,8 @@ Plug 'sheerun/vim-polyglot'
 " Arduino on Vim.
 Plug 'jplaut/vim-arduino-ino', { 'for': 'arduino' }
 
-" Base 16 colorschemes.  Plug 'chriskempson/base16-vim'
+" Base 16 colorschemes.
+Plug 'chriskempson/base16-vim'
 
 " Gruvbox.
 Plug 'morhetz/gruvbox'
@@ -57,15 +58,15 @@ Plug 'honza/vim-snippets'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " 🌷 Distraction-free writing in Vim
-Plug 'junegunn/goyo.vim'
+Plug 'junegunn/goyo.vim', { 'for': ['text', 'markdown'] }
 
 " 🔦 All the world's indeed a stage and we are merely players.
-Plug 'junegunn/limelight.vim'
+Plug 'junegunn/limelight.vim', { 'for': ['text', 'markdown'] }
 
 " Markdown plugins.
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
+Plug 'godlygeek/tabular', { 'for': ['text', 'markdown'] }
+Plug 'plasticboy/vim-markdown', { 'for': ['text', 'markdown'] }
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install', 'for': ['text', 'markdown'] }
 
 " Flake8 Plugin for Vim
 Plug 'nvie/vim-flake8', { 'for': 'python' }
