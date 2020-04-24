@@ -45,7 +45,9 @@ disable SIP in order to install, so please follow
     ```
 
 * [Input Mono Font](http://input.fontbureau.com/download/?customize&fontSelection=whole&a=ss&g=ss&i=0&l=0&zero=0&asterisk=height&braces=straight&preset=default&line-height=1.2&email=)
+    * Either Condensed or Compressed, otherwise it's too large.
 * [SauceCodePro Nerd Font](https://github.com/ryanoasis/nerd-fonts)
+* [Iosevka](https://github.com/be5invis/Iosevka)
 
 ### Other Apps
 
