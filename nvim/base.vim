@@ -5,8 +5,8 @@ filetype on
 filetype plugin on
 filetype indent on
 
-" Set leader key to ",".
-let mapleader=","
+" Set leader key to SPACE.
+let mapleader=" "
 
 " Folding.
 set foldenable
@@ -121,7 +121,7 @@ set listchars+=nbsp:⣿
 set undofile
 set undodir=~/.vim/undodir
 
-" Automtically remove CursorLine whenever the split is not in focus.
+" Automatically remove CursorLine whenever the split is not in focus.
 augroup CursorLine
     au!
     au VimEnter * setlocal cursorline
@@ -133,3 +133,12 @@ augroup END
 " However, in Git commit messages, let’s make it 72 characters
 autocmd FileType gitcommit set textwidth=72
 autocmd FileType gitcommit set colorcolumn=73
+
+" Spelling.
+set spell spelllang=en_us
+nnoremap <leader>s :set spell!<CR>
+nnoremap <leader>f 1z=
+
+" Mix format elixir files on save.
+autocmd BufWritePost *.ex :MixFormat
+autocmd BufWritePost *.exs :MixFormat
