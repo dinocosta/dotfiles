@@ -29,7 +29,6 @@ export ZSH=/Users/$USER/.oh-my-zsh
 
 source $DOTFILES/zsh/theme_dark.zsh
 source $DOTFILES/functions/aliases.zsh
-source $DOTFILES/functions/work_aliases.zsh
 
 # History.
 setopt inc_append_history
@@ -96,7 +95,6 @@ zplug load
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  virtualenv
   kubectl
   pipenv
 )
@@ -126,11 +124,6 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=245"
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# Virtualenvwrapper
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
-source /usr/local/bin/virtualenvwrapper.sh
-export WORKON_HOME=~/.virtualenvs
-
 # RabbitMQ CLI Tools.
 export PATH=$PATH:/usr/local/sbin
 
@@ -142,8 +135,6 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source "/Users/dino.costa/Library/Application Support/creds/nexus"
-export PATH="/usr/local/opt/mongodb@3.2/bin:$PATH"
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
@@ -169,3 +160,4 @@ lesscolors=$HOME/bin/.LESS_TERMCAP
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
