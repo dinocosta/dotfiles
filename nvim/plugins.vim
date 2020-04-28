@@ -24,6 +24,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'morhetz/gruvbox'
 
 " A dark Vim/Neovim color scheme inspired by Atom's One Dark syntax theme.
+Plug 'rakr/vim-one'
 Plug 'joshdick/onedark.vim'
 
 " Vim configuration files for Elixir
@@ -103,13 +104,6 @@ call plug#end()
 let g:deoplete#enable_at_startup = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Emmet
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Change emmet shortcut to ctrl+z+,
-let g:user_emmet_leader_key='<C-Z>'
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " indentLine
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -122,7 +116,6 @@ let g:indentLine_char = "│"
 
 set rtp+=/usr/local/opt/fzf
 let $FZF_DEFAULT_COMMAND = 'ag --nocolor -g ""'
-nmap ; :FZF<CR>
 
 " Augmenting Ag command using fzf#vim#with_preview function
 "   * fzf#vim#with_preview([[options], preview window, [toggle keys...]])
@@ -187,7 +180,7 @@ let g:NERDTreeStatusline = '%#NonText#'
 
 " Remove space between arrow icon and folder icon.
 let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
-let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
+let g:WebDevIconsUnicodeDecorateFolderNodes = v:false
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
