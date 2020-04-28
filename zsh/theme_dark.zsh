@@ -14,7 +14,6 @@ SPACESHIP_PROMPT_ORDER=(
   user          # Username section
   dir           # Current directory section
   git           # Git section (git_branch + git_status)
-  venv          # virtualenv section
   exec_time     # Execution time
   line_sep      # Line break
   char          # Prompt character
