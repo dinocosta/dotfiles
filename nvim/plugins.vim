@@ -84,14 +84,14 @@ Plug 'tpope/vim-unimpaired'
 " Add plist editing support to Vim.
 Plug 'darfink/vim-plist'
 
-" Adds file type icons to Vim plugins such as: NERDTree, vim-airline, CtrlP, unite, Denite, lightline, vim-startify and many more.
-Plug 'ryanoasis/vim-devicons'
-
 " Functions for taking the monotony out of building your own fancy statusline in Vim
 Plug 'rbong/vim-crystalline'
 
 " simple vim plugin to make http requests from buffers.
 Plug 'nicwest/vim-http'
+
+" surround.vim: quoting/parenthesizing made simple
+Plug 'tpope/vim-surround'
 
 " Add plugins to runtimepath
 call plug#end()
