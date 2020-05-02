@@ -2,6 +2,8 @@ set termguicolors
 syntax on
 set t_Co=256
 colorscheme onedark
+let g:onedark_termcolors=256
+let g:onedark_terminal_italics=1
 
 " Automatically change the statusline color depending on mode
 " hi statusbarcolor ctermfg=black ctermbg=white guifg=#282c34 guibg=#abb2bf
