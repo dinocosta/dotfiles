@@ -24,11 +24,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'morhetz/gruvbox'
 
 " A dark Vim/Neovim color scheme inspired by Atom's One Dark syntax theme.
-Plug 'rakr/vim-one'
 Plug 'joshdick/onedark.vim'
-
-" Vim configuration files for Elixir
-Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 
 " fugitive.vim: a Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
@@ -42,11 +38,14 @@ Plug 'Shougo/deoplete.nvim', { 'do':  'UpdateRemotePlugins' }
 " Elixir Integration Into Vim
 Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 
-" A tree explorer plugin for vim.
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
+" Vim configuration files for Elixir
+Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
 
 " Vim integration for the Elixir formatter.
 Plug 'mhinz/vim-mix-format', { 'for': 'elixir' }
+
+" A tree explorer plugin for vim.
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 
 " Asynchronous linting/fixing for Vim and Language Server Protocol (LSP) integration.
 Plug 'w0rp/ale'
@@ -54,9 +53,6 @@ Plug 'w0rp/ale'
 " UltiSnips - The ultimate snippet solution for Vim.
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-
-" Go development plugin for Vim.
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " 🌷 Distraction-free writing in Vim
 Plug 'junegunn/goyo.vim', { 'for': ['text', 'markdown'] }
@@ -68,12 +64,6 @@ Plug 'junegunn/limelight.vim', { 'for': ['text', 'markdown'] }
 Plug 'godlygeek/tabular', { 'for': ['text', 'markdown'] }
 Plug 'plasticboy/vim-markdown', { 'for': ['text', 'markdown'] }
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install', 'for': ['text', 'markdown'] }
-
-" Flake8 Plugin for Vim
-Plug 'nvie/vim-flake8', { 'for': 'python' }
-
-" Using the jedi autocompletion library for VIM.
-Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 
 " Open selected text in https://carbon.now.sh.
 Plug 'kristijanhusak/vim-carbon-now-sh'
