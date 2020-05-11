@@ -213,13 +213,13 @@ else
   pp_success "The Silver Searcher/AG already installed."
 fi
 
-# Ctags.
+# Universal Ctags.
 if [[ "$(which ctags)" != "/usr/local/bin/ctags" ]]; then
-  pp_info "Installing ctags..."
-  brew install ctags
-  pp_success "Successfully installed ctags."
+  pp_info "Installing universal ctags..."
+  brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+  pp_success "Successfully installed universal ctags."
 else
-  pp_success "ctags already installed."
+  pp_success "universal ctags already installed."
 fi
 
 
