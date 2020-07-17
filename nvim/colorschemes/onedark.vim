@@ -41,18 +41,19 @@ let g:indentLine_color_term=240
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
-\ { 'fg':      ['fg', 'Normal'],
+\ { 'fg':      ['fg', 'Comment'],
   \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'String'],
-  \ 'fg+':     ['fg', 'Normal'],
+  \ 'hl':      ['fg', 'Normal'],
+  \ 'fg+':     ['fg', 'String'],
   \ 'bg+':     ['bg', 'Normal'],
+  \ 'hl+':     ['fg', 'String'],
   \ 'info':    ['fg', 'PreProc'],
   \ 'border':  ['fg', 'Ignore'],
   \ 'prompt':  ['fg', 'Function'],
   \ 'pointer': ['fg', 'Keyword', 'bg', 'CursorLine'],
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
+  \ 'header':  ['fg', 'Function']}
 
 " Change color of vertical split separator for NerdTree.
 hi VertSplit guifg=#abb2bf

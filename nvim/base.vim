@@ -12,10 +12,6 @@ let mapleader=" "
 set foldenable
 set foldlevelstart=7
 set foldnestmax=10
-set foldmethod=indent
-
-" Exuberant CTags.
-set tags=tags;
 
 " Disable showmode so '--INSERT--' is not shown.
 set noshowmode
@@ -36,7 +32,7 @@ set backspace=indent,eol,start
 set shell=zsh
 
 " Python 2 and 3 locations.
-let g:python2_host_prog = '/usr/local/bin/python'
+let g:python2_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/local/bin/python3'
 
 " Remove trailing whitespaces
@@ -138,7 +134,3 @@ autocmd FileType gitcommit set colorcolumn=73
 set spell spelllang=en_us
 nnoremap <leader>s :set spell!<CR>
 nnoremap <leader>f 1z=
-
-" Mix format elixir files on save.
-autocmd BufWritePost *.ex :MixFormat
-autocmd BufWritePost *.exs :MixFormat

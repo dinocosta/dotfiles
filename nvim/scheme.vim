@@ -51,14 +51,14 @@ function! StatusLine(current, width)
     let l:s .= crystalline#mode() . '%#Fill#'
   endif
 
-  let l:s .= ' %t%h%w%m%r '
+  let l:s .= ' %f%h%w%m%r '
   if a:current
     let l:s .= crystalline#right_sep('', 'Normal') . ' '
   endif
 
   let l:s .= '%='
   if a:current
-    let l:s .= crystalline#left_sep('', 'Fill') . ' %{&paste ?"PASTE ":""}%{&spell?"SPELL ":""}'
+    let l:s .= crystalline#left_sep('', 'Fill') . ' %{&paste ?"PASTE ":""}%{&spell?"SPELL ":""}' . '%{gutentags#statusline("[", "] ")}'
     let l:s .= crystalline#left_mode_sep('')
   endif
 

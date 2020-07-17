@@ -39,10 +39,10 @@ Plug 'Shougo/deoplete.nvim', { 'do':  'UpdateRemotePlugins' }
 Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
 
 " Vim configuration files for Elixir
-Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
 
 " Vim integration for the Elixir formatter.
-Plug 'mhinz/vim-mix-format', { 'for': 'elixir' }
+Plug 'joaofcosta/vim-mix-format', { 'for': 'elixir' }
 
 " A tree explorer plugin for vim.
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
@@ -55,15 +55,15 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 " 🌷 Distraction-free writing in Vim
-Plug 'junegunn/goyo.vim', { 'for': ['text', 'markdown'] }
+Plug 'junegunn/goyo.vim', { 'for': ['markdown'] }
 
 " 🔦 All the world's indeed a stage and we are merely players.
-Plug 'junegunn/limelight.vim', { 'for': ['text', 'markdown'] }
+Plug 'junegunn/limelight.vim', { 'for': ['markdown'] }
 
 " Markdown plugins.
-Plug 'godlygeek/tabular', { 'for': ['text', 'markdown'] }
-Plug 'plasticboy/vim-markdown', { 'for': ['text', 'markdown'] }
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install', 'for': ['text', 'markdown'] }
+Plug 'godlygeek/tabular', { 'for': ['markdown'] }
+Plug 'plasticboy/vim-markdown', { 'for': ['markdown'] }
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install', 'for': ['markdown'] }
 
 " Open selected text in https://carbon.now.sh.
 Plug 'kristijanhusak/vim-carbon-now-sh'
@@ -71,17 +71,19 @@ Plug 'kristijanhusak/vim-carbon-now-sh'
 " unimpaired.vim: Pairs of handy bracket mappings.
 Plug 'tpope/vim-unimpaired'
 
-" Add plist editing support to Vim.
-Plug 'darfink/vim-plist'
-
 " Functions for taking the monotony out of building your own fancy statusline in Vim
 Plug 'rbong/vim-crystalline'
 
-" simple vim plugin to make http requests from buffers.
-Plug 'nicwest/vim-http'
-
 " surround.vim: quoting/parenthesizing made simple
 Plug 'tpope/vim-surround'
+
+" Vim plugin that displays tags in a window, ordered by scope
+Plug 'majutsushi/tagbar'
+
+" A Vim plugin that manages your tag files
+Plug 'ludovicchabant/vim-gutentags'
+
+Plug 'voldikss/vim-floaterm'
 
 " Add plugins to runtimepath
 call plug#end()
@@ -106,6 +108,43 @@ let g:indentLine_char = "│"
 
 set rtp+=/usr/local/opt/fzf
 let $FZF_DEFAULT_COMMAND = 'ag --nocolor -g ""'
+let $FZF_DEFAULT_OPTS=' --pointer="▶" --no-info --margin=1,3'
+
+" Function which is used in order to open FZF in a floating window.
+function! CreateCenteredFloatingWindow()
+    let width = min([&columns - 4, min([80, &columns - 20])])
+    let height = min([&lines - 4, min([20, &lines - 10])])
+    let top = ((&lines - height) / 2) - 1
+    let left = (&columns - width) / 2
+    let opts = {'relative': 'editor', 'row': top, 'col': left, 'width': width, 'height': height, 'style': 'minimal'}
+
+    let top = "╭" . repeat("─", width - 2) . "╮"
+    let mid = "│" . repeat(" ", width - 2) . "│"
+    let bot = "╰" . repeat("─", width - 2) . "╯"
+    let lines = [top] + repeat([mid], height - 2) + [bot]
+    let s:buf = nvim_create_buf(v:false, v:true)
+    call nvim_buf_set_lines(s:buf, 0, -1, v:true, lines)
+    call nvim_open_win(s:buf, v:true, opts)
+    set winhl=Normal:Floating
+    let opts.row += 1
+    let opts.height -= 2
+    let opts.col += 2
+    let opts.width -= 4
+    call nvim_open_win(nvim_create_buf(v:false, v:true), v:true, opts)
+    au BufWipeout <buffer> exe 'bw '.s:buf
+endfunction
+
+" Hide FZF preview window.
+let g:fzf_preview_window = ''
+
+" Removes the bar at the bottom that says fzf while fzf is running.
+autocmd! FileType fzf
+
+" Disables the indent lines plugin in the FZF window.
+autocmd FileType fzf :IndentLinesDisable
+
+" Disables relativenumbers in FZF windows and other shenanigans.
+autocmd FileType fzf set laststatus=0 noshowmode noruler norelativenumber | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
 " Augmenting Ag command using fzf#vim#with_preview function
 "   * fzf#vim#with_preview([[options], preview window, [toggle keys...]])
@@ -122,13 +161,6 @@ command! -bang -nargs=* Ag
   \                 <bang>0 ? fzf#vim#with_preview('up:60%')
   \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
   \                 <bang>0)
-
-" Removes the bar at the bottom that says fzf while fzf is running.
-autocmd! FileType fzf
-" Disables the indent lines plugin in the FZF window.
-autocmd FileType fzf :IndentLinesDisable
-" Disables relativenumbers in FZF windows and other shenanigans.
-autocmd FileType fzf set laststatus=0 noshowmode noruler norelativenumber | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GitGutter
@@ -218,3 +250,8 @@ autocmd FileType markdown set conceallevel=0
 " Make alchemist use Ctrl-[ instead of Ctrl-] because that's vim defaults for
 " CTags.
 let g:alchemist_tag_map = '<C-[>'
+
+"let g:ale_linters = {
+"\   'elixir': ['elixir-ls'],
+"\}
+"let g:ale_elixir_elixir_ls_release='/Users/dino/Developer/elixir-ls/release'
