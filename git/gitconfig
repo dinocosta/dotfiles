@@ -1,6 +1,6 @@
 [user]
 	email = dinojoaocosta@gmail.com
-	name = joaofcosta
+	name = dino
 [core]
 	excludesfile = ~/.gitignore
 	editor = nvim
