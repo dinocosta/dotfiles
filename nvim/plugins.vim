@@ -32,11 +32,8 @@ Plug 'airblade/vim-gitgutter'
 
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
-" Dark powered asynchronous completion framework for neovim/Vim8
-Plug 'Shougo/deoplete.nvim', { 'do':  'UpdateRemotePlugins' }
-
-" Elixir Integration Into Vim
-Plug 'slashmili/alchemist.vim', { 'for': 'elixir' }
+" Intellisense engine for Vim8 & Neovim, full language server protocol support as VSCode.
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " Vim configuration files for Elixir
 Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
@@ -46,9 +43,6 @@ Plug 'joaofcosta/vim-mix-format', { 'for': 'elixir' }
 
 " A tree explorer plugin for vim.
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
-
-" Asynchronous linting/fixing for Vim and Language Server Protocol (LSP) integration.
-Plug 'w0rp/ale'
 
 " UltiSnips - The ultimate snippet solution for Vim.
 Plug 'SirVer/ultisnips'
@@ -83,8 +77,6 @@ Plug 'majutsushi/tagbar'
 " A Vim plugin that manages your tag files
 Plug 'ludovicchabant/vim-gutentags'
 
-Plug 'voldikss/vim-floaterm'
-
 " Add plugins to runtimepath
 call plug#end()
 
@@ -112,7 +104,7 @@ let $FZF_DEFAULT_OPTS=' --pointer="▶" --no-info --margin=1,3'
 
 " Function which is used in order to open FZF in a floating window.
 function! CreateCenteredFloatingWindow()
-    let width = min([&columns - 4, min([80, &columns - 20])])
+    let width = min([&columns - 4, max([80, &columns - 20])])
     let height = min([&lines - 4, min([20, &lines - 10])])
     let top = ((&lines - height) / 2) - 1
     let left = (&columns - width) / 2
@@ -242,16 +234,3 @@ let g:crystalline_separators=['', '']
 
 let g:mkdp_refresh_slow=1
 autocmd FileType markdown set conceallevel=0
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" alchemist
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Make alchemist use Ctrl-[ instead of Ctrl-] because that's vim defaults for
-" CTags.
-let g:alchemist_tag_map = '<C-[>'
-
-"let g:ale_linters = {
-"\   'elixir': ['elixir-ls'],
-"\}
-"let g:ale_elixir_elixir_ls_release='/Users/dino/Developer/elixir-ls/release'

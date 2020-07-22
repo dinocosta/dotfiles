@@ -45,3 +45,18 @@ nnoremap <Leader>g :G<CR>
 " Open FZF with Ctrl-P or Leader+;.
 nmap <C-P> :call fzf#vim#files('.', {'options': '--prompt "" --layout=reverse', 'window': 'call CreateCenteredFloatingWindow()'})<CR>
 nmap <Leader>; :call fzf#vim#files('.', {'options': '--prompt "" --layout=reverse', 'window': 'call CreateCenteredFloatingWindow()'})<CR>
+
+" Jump to definition with Ctrl+]
+nmap <silent> <C-]> <Plug>(coc-definition)
+nmap <silent> gr <Plug>(coc-references)
+
+" Fetch documentation.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
