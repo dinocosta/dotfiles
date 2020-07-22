@@ -1,3 +1,7 @@
+""""""""""""""""""""""""""""""""""""""""
+" Contains all the mappings for neovim "
+""""""""""""""""""""""""""""""""""""""""
+
 " Close and open folds using LEADER+,.
 nnoremap <leader>, za
 
@@ -25,8 +29,10 @@ nnoremap <Leader>w :w<CR>
 " Quit vim using Leader+q.
 nnoremap <Leader>q :q<CR>
 
-" Buffers
-"
+""""""""""""""""""""""""""""""
+" BUFFERS
+""""""""""""""""""""""""""""""
+
 " List all possible buffers with "gl"
 nnoremap gl :call fzf#vim#buffers({'options': '--layout=reverse', 'window': 'call CreateCenteredFloatingWindow()'})<CR>
 
@@ -43,6 +49,13 @@ map <silent> <C-N> :NERDTreeToggle<CR>
 nnoremap <Leader>g :G<CR>
 
 " Open FZF with Ctrl-P or Leader+;.
+"
+" Here's the explanations for the extra commands:
+" * --prompt ""  -> makes FZF prompt be equal to an empty string
+" * --layout=reverse -> reverses the layout so that the prompt is at the top
+"   of the window instead of the bottom.
+" * 'window': 'call CreateCenteredFloatingWindow()' -> Calls the provided
+"   function in order to create the FZF window.
 nmap <C-P> :call fzf#vim#files('.', {'options': '--prompt "" --layout=reverse', 'window': 'call CreateCenteredFloatingWindow()'})<CR>
 nmap <Leader>; :call fzf#vim#files('.', {'options': '--prompt "" --layout=reverse', 'window': 'call CreateCenteredFloatingWindow()'})<CR>
 
