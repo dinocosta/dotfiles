@@ -5,7 +5,6 @@ function! ElixirFoldText()
   return getline(v:foldstart).' ('.fold_size.' lines)'
 endfunction
 setlocal foldtext=ElixirFoldText()
-setlocal foldmethod=syntax
 
 " function! ElixirFolds()
 "   let tabstop = &tabstop

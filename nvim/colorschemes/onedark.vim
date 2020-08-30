@@ -41,9 +41,9 @@ let g:indentLine_color_term=240
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
-\ { 'fg':      ['fg', 'Comment'],
+\ { 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Normal'],
+  \ 'hl':      ['fg', 'String'],
   \ 'fg+':     ['fg', 'String'],
   \ 'bg+':     ['bg', 'Normal'],
   \ 'hl+':     ['fg', 'String'],
@@ -57,3 +57,7 @@ let g:fzf_colors =
 
 " Change color of vertical split separator for NerdTree.
 hi VertSplit guifg=#abb2bf
+
+" Set Coc colors based on other highlight groups for consistency.
+exec 'hi CocErrorSign guifg=' . synIDattr(hlID('Keyword'), 'fg')
+exec 'hi CocWarningSign guifg=' . synIDattr(hlID('Type'), 'fg')

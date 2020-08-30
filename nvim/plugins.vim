@@ -11,17 +11,8 @@ Plug 'Yggdroot/indentLine'
 " Vim plugin, provides insert mode auto-completion for quotes, parens, brackets, etc.
 Plug 'Raimondi/delimitMate'
 
-" A solid language pack for Vim.
-Plug 'sheerun/vim-polyglot'
-
-" Arduino on Vim.
-Plug 'jplaut/vim-arduino-ino', { 'for': 'arduino' }
-
 " Base 16 colorschemes.
 Plug 'chriskempson/base16-vim'
-
-" Gruvbox.
-Plug 'morhetz/gruvbox'
 
 " A dark Vim/Neovim color scheme inspired by Atom's One Dark syntax theme.
 Plug 'joshdick/onedark.vim'
@@ -79,13 +70,6 @@ Plug 'ludovicchabant/vim-gutentags'
 
 " Add plugins to runtimepath
 call plug#end()
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" deoplete
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-let g:deoplete#enable_at_startup = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " indentLine
@@ -172,6 +156,8 @@ let g:NERDTreeStatusline = '%#NonText#'
 let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
 let g:WebDevIconsUnicodeDecorateFolderNodes = v:false
 
+" Set NERDTree default width to 60 columns.
+let g:NERDTreeWinSize = 40
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " UtilSnips

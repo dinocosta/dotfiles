@@ -8,11 +8,6 @@ filetype indent on
 " Set leader key to SPACE.
 let mapleader=" "
 
-" Folding.
-set foldenable
-set foldlevelstart=7
-set foldnestmax=10
-
 " Disable showmode so '--INSERT--' is not shown.
 set noshowmode
 
