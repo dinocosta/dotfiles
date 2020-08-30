@@ -33,9 +33,6 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 " Remove trailing whitespaces
 autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 
-" Spell checking and automaatic wrapping at 72 columns for commits.
-autocmd Filetype gitcommit setlocal spell textwidth=72
-
 " Highlight all matched search terms.
 set hlsearch
 
@@ -57,14 +54,8 @@ set wrap
 " Show numbers relative to the current line.
 set relativenumber
 
-" Show current line number.
-set number
-
 " Enable mouse use on all modes.
 set mouse=a
-
-" Number of lines to keep above and below the cursor when scrolling.
-set scrolloff=5
 
 " No backups after overwritting.
 set nobackup
@@ -84,17 +75,8 @@ set timeoutlen=300
 " Open diffs with vertical splits.
 set diffopt+=vertical
 
-" Highlight current line.
-set cursorline
-
-" yank to clipboard
-if has ("clipboard")
-  set clipboard=unnamed " copy to the system clipboard
-
-  if has ("unnamedplus") " X11 Support
-    set clipboard+=unnamedplus
-  endif
-endif
+" copy to the system clipboard.
+set clipboard=unnamed " copy to the system clipboard
 
 " Highlight whitespaces.
 set list
@@ -112,20 +94,10 @@ set listchars+=nbsp:⣿
 set undofile
 set undodir=~/.vim/undodir
 
-" Automatically remove CursorLine whenever the split is not in focus.
-augroup CursorLine
-    au!
-    au VimEnter * setlocal cursorline
-    au WinEnter * setlocal cursorline
-    au BufWinEnter * setlocal cursorline
-    au WinLeave * setlocal nocursorline
-augroup END
-
-" However, in Git commit messages, let’s make it 72 characters
-autocmd FileType gitcommit set textwidth=72
-autocmd FileType gitcommit set colorcolumn=73
-
 " Spelling.
 set spell spelllang=en_us
 nnoremap <leader>s :set spell!<CR>
 nnoremap <leader>f 1z=
+
+set noshowcmd
+set noruler

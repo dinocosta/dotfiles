@@ -1,4 +1,5 @@
 setlocal colorcolumn=120
+setlocal synmaxcol=120
 
 function! ElixirFoldText()
   let fold_size = (v:foldend - v:foldstart)

@@ -22,26 +22,6 @@ let g:currentmode={
       \ 't'  : 'Terminal '
       \}
 
-" Check if file is read only and return a specific
-" character if it is, in order to be displayed on the status line.
-function! ReadOnly()
-  if &readonly || !&modifiable
-    return '🔒'
-  else
-    return ''
-endfunction
-
-" " StatusLine
-" set laststatus=2
-" set statusline=
-" set statusline+=%{ChangeStatuslineColor()}                                  " Changing the statusline color
-" set statusline+=%0*\ %{toupper(g:currentmode[mode()])}                      " Current mode
-" set statusline+=%8*%#statusbarcolor#\ %<%t\ %{ReadOnly()}\ %m\ %w\          " File+path
-" set statusline+=%9*%#statusbarcolor#\ %=                                    " Space
-" set statusline+=%8*%#statusbarcolor#\ %y\                                   " FileType
-" set statusline+=%7*%#statusbarcolor#\ %{(&fenc!=''?&fenc:&enc)}\[%{&ff}]\   " Encoding & Fileformat
-" set statusline+=%0*\ %3p%%\ \ %l/%L:\ %3c\                                 " Rownumber/total (%)
-
 function! StatusLine(current, width)
   let l:s = ''
 
@@ -79,3 +59,6 @@ set laststatus=2
 
 " Make comments italic.
 hi Comment cterm=italic gui=italic
+
+" Prevent neovim from printing all background colors to make it faster.
+hi Normal ctermbg=None guibg=None
