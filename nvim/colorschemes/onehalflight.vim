@@ -37,12 +37,20 @@ let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
   \ 'hl':      ['fg', 'String'],
-  \ 'fg+':     ['fg', 'Normal'],
+  \ 'fg+':     ['fg', 'String'],
   \ 'bg+':     ['bg', 'Normal'],
+  \ 'hl+':     ['fg', 'String'],
   \ 'info':    ['fg', 'PreProc'],
   \ 'border':  ['fg', 'Ignore'],
   \ 'prompt':  ['fg', 'Function'],
-  \ 'pointer': ['fg', 'Keyword'],
+  \ 'pointer': ['fg', 'Keyword', 'bg', 'CursorLine'],
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
+  \ 'header':  ['fg', 'Function']}
+
+" Change color of vertical split separator for NerdTree.
+hi VertSplit guifg=#abb2bf
+
+" Set Coc colors based on other highlight groups for consistency.
+exec 'hi CocErrorSign guifg=' . synIDattr(hlID('Keyword'), 'fg')
+exec 'hi CocWarningSign guifg=' . synIDattr(hlID('Type'), 'fg')

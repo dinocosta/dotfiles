@@ -54,6 +54,15 @@ set wrap
 " Show numbers relative to the current line.
 set relativenumber
 
+" Show line number.
+set number
+
+" Create folds by indentation level.
+set foldmethod=indent
+
+" Open all folds when opening a new buffer.
+set foldlevelstart=20
+
 " Enable mouse use on all modes.
 set mouse=a
 
@@ -77,6 +86,9 @@ set diffopt+=vertical
 
 " copy to the system clipboard.
 set clipboard=unnamed " copy to the system clipboard
+
+" Highlight current line.
+set cursorline
 
 " Highlight whitespaces.
 set list

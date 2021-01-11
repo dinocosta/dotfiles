@@ -29,6 +29,7 @@ export ZSH=/Users/$USER/.oh-my-zsh
 
 source $DOTFILES/zsh/theme_dark.zsh
 source $DOTFILES/functions/aliases.zsh
+source $DOTFILES/functions/personal.zsh
 
 # History.
 setopt inc_append_history
@@ -43,6 +44,8 @@ source $ZPLUG_HOME/init.zsh
 zplug "geometry-zsh/geometry"
 zplug load
 
+# Kubectl Auto Completion
+source <(kubectl completion zsh)
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -95,7 +98,6 @@ zplug load
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  kubectl
   pipenv
 )
 
