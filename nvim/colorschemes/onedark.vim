@@ -36,6 +36,8 @@ let g:onedark_terminal_italics=1
 " hi Pmenu ctermbg=black ctermfg=white guibg=#313640 guifg=#dcdfe4
 " hi PmenuSel ctermbg=gray ctermfg=black guibg=#61afef guifg=#313640
 
+let g:crystalline_theme = 'onedark'
+
 " Change color of indent lines.
 let g:indentLine_color_term=240
 

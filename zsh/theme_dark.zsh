@@ -3,13 +3,6 @@
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="spaceship"
 
-export GEOMETRY_PROMPT_PLUGINS=(git virtualenv exec_time)
-export GEOMETRY_COLOR_TIME_NEUTRAL="yellow"
-export GEOMETRY_COLOR_TIME_SHORT="yellow"
-export GEOMETRY_COLOR_TIME_LONG="yellow"
-export GEOMETRY_COLOR_PROMPT="red"
-export PROMPT_GEOMETRY_MULTILINE="true"
-
 SPACESHIP_PROMPT_ORDER=(
   user          # Username section
   dir           # Current directory section

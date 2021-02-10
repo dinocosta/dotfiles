@@ -1,4 +1,4 @@
-source $HOME/Developer/dotfiles/nvim/colorschemes/onedark.vim
+source $HOME/Developer/dotfiles/nvim/colorschemes/gruvboxlight.vim
 
 let g:currentmode={
       \ 'n'  : 'N ',
@@ -53,12 +53,8 @@ endfunction
 
 let g:crystalline_enable_sep = 1
 let g:crystalline_statusline_fn = 'StatusLine'
-let g:crystalline_theme = 'onedark'
 
 set laststatus=2
 
 " Make comments italic.
 hi Comment cterm=italic gui=italic
-
-" Prevent neovim from printing all background colors to make it faster.
-hi Normal ctermbg=None guibg=None

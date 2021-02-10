@@ -19,6 +19,8 @@ function! ChangeStatuslineColor()
   return ''
 endfunction
 
+let g:crystalline_theme = 'onehalfdark'
+
 " Matched words colors.
 highlight Search cterm=None ctermfg=white ctermbg=black guibg=#e45649 guifg=#fafafa
 
@@ -39,11 +41,11 @@ let g:fzf_colors =
   \ 'hl':      ['fg', 'String'],
   \ 'fg+':     ['fg', 'String'],
   \ 'bg+':     ['bg', 'Normal'],
-  \ 'hl+':     ['fg', 'String'],
+  \ 'hl+':     ['fg', 'CursorLine'],
   \ 'info':    ['fg', 'PreProc'],
   \ 'border':  ['fg', 'Ignore'],
   \ 'prompt':  ['fg', 'Function'],
-  \ 'pointer': ['fg', 'Keyword', 'bg', 'CursorLine'],
+  \ 'pointer': ['fg', 'Function', 'bg', 'CursorLine'],
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Function']}

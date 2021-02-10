@@ -21,6 +21,8 @@ function! ChangeStatuslineColor()
   return ''
 endfunction
 
+let g:crystalline_theme = 'onedark'
+
 " Matched words colors.
 hi Search cterm=None ctermfg=black ctermbg=253 guifg=#000000 guibg=#dadada
 "

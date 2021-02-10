@@ -68,6 +68,8 @@ Plug 'majutsushi/tagbar'
 " A Vim plugin that manages your tag files
 Plug 'ludovicchabant/vim-gutentags'
 
+Plug 'morhetz/gruvbox'
+
 " Add plugins to runtimepath
 call plug#end()
 
