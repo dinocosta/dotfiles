@@ -113,3 +113,7 @@ nnoremap <leader>f 1z=
 
 set noshowcmd
 set noruler
+
+" Enable live substitution, you'll be able to see the substitution happening
+" as you use the %s command.
+set inccommand=split

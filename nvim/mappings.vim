@@ -42,8 +42,8 @@ nmap <Leader>d :bd<CR>
 " Close quickfix window with Leader+x.
 map <Leader>x :cclose<CR>
 
-" Toogle NERDTree with Ctrl+N.
-map <silent> <C-N> :NERDTreeToggle<CR>
+" Toogle CHADTree with Ctrl+N.
+map <silent> <C-N> :CHADopen<CR>
 
 " Toggle fugitive window with Leader+g.
 nnoremap <Leader>g :G<CR>

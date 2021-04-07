@@ -19,7 +19,7 @@ function! ChangeStatuslineColor()
   return ''
 endfunction
 
-let g:crystalline_theme = 'onehalfdark'
+let g:crystalline_theme = 'onedark'
 
 " Matched words colors.
 highlight Search cterm=None ctermfg=white ctermbg=black guibg=#e45649 guifg=#fafafa

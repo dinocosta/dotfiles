@@ -32,8 +32,8 @@ Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
 " Vim integration for the Elixir formatter.
 Plug 'joaofcosta/vim-mix-format', { 'for': 'elixir' }
 
-" A tree explorer plugin for vim.
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
+"File manager for Neovim. Better than NERDTree.
+Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 
 " UltiSnips - The ultimate snippet solution for Vim.
 Plug 'SirVer/ultisnips'
@@ -69,6 +69,8 @@ Plug 'majutsushi/tagbar'
 Plug 'ludovicchabant/vim-gutentags'
 
 Plug 'morhetz/gruvbox'
+
+Plug 'tpope/vim-projectionist'
 
 " Add plugins to runtimepath
 call plug#end()
@@ -145,21 +147,11 @@ let g:netrw_liststyle = 3
 let g:netrw_sort_sequence = '[\/]$,*'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" NERDTree
+" CHADTree
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Ignore .pyc files.
-let NERDTreeIgnore = ['\.pyc$']
+let g:chadtree_settings = { 'theme.icon_glyph_set': 'ascii' }
 
-" Hide statusline.
-let g:NERDTreeStatusline = '%#NonText#'
-
-" Remove space between arrow icon and folder icon.
-let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
-let g:WebDevIconsUnicodeDecorateFolderNodes = v:false
-
-" Set NERDTree default width to 60 columns.
-let g:NERDTreeWinSize = 40
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " UtilSnips
