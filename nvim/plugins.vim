@@ -19,12 +19,11 @@ Plug 'joshdick/onedark.vim'
 
 " fugitive.vim: a Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
+
+" A Vim plugin which shows git diff markers in the sign column and stages/previews/undoes hunks and partial hunks.
 Plug 'airblade/vim-gitgutter'
 
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
-
-" Intellisense engine for Vim8 & Neovim, full language server protocol support as VSCode.
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " Vim configuration files for Elixir
 Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
@@ -32,26 +31,9 @@ Plug 'elixir-editors/vim-elixir', { 'for': 'elixir' }
 " Vim integration for the Elixir formatter.
 Plug 'joaofcosta/vim-mix-format', { 'for': 'elixir' }
 
-" A tree explorer plugin for vim.
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
-
 " UltiSnips - The ultimate snippet solution for Vim.
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-
-" 🌷 Distraction-free writing in Vim
-Plug 'junegunn/goyo.vim', { 'for': ['markdown'] }
-
-" 🔦 All the world's indeed a stage and we are merely players.
-Plug 'junegunn/limelight.vim', { 'for': ['markdown'] }
-
-" Markdown plugins.
-Plug 'godlygeek/tabular', { 'for': ['markdown'] }
-Plug 'plasticboy/vim-markdown', { 'for': ['markdown'] }
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install', 'for': ['markdown'] }
-
-" Open selected text in https://carbon.now.sh.
-Plug 'kristijanhusak/vim-carbon-now-sh'
 
 " unimpaired.vim: Pairs of handy bracket mappings.
 Plug 'tpope/vim-unimpaired'
@@ -71,6 +53,11 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'morhetz/gruvbox'
 
 Plug 'tpope/vim-projectionist'
+
+Plug 'neovim/nvim-lspconfig'
+
+" A file explorer tree for neovim written in lua.
+Plug 'kyazdani42/nvim-tree.lua'
 
 " Add plugins to runtimepath
 call plug#end()
@@ -132,38 +119,6 @@ let g:gitgutter_sign_removed = '●'
 let g:gitgutter_sign_modified_removed = '●'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" netrw
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Remove top banner.
-let g:netrw_banner = 0
-" Open new file in a same window that was used to call netrw.
-let g:netrw_browse_split = 4
-" Set netrw's window size to 25% of the page.
-let g:netrw_winsize = 25
-" Tree-view.
-let g:netrw_liststyle = 3
-" Sort by folders first and files last.
-let g:netrw_sort_sequence = '[\/]$,*'
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" NERDTree
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Ignore .pyc files.
-let NERDTreeIgnore = ['\.pyc$']
-
-" Hide statusline.
-let g:NERDTreeStatusline = '%#NonText#'
-
-" Remove space between arrow icon and folder icon.
-let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
-let g:WebDevIconsUnicodeDecorateFolderNodes = v:false
-
-" Set NERDTree default width to 60 columns.
-let g:NERDTreeWinSize = 40
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " UtilSnips
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:UltiSnipsExpandTrigger="<C-j>"
@@ -188,3 +143,89 @@ let g:crystalline_separators=['', '']
 
 let g:mkdp_refresh_slow=1
 autocmd FileType markdown set conceallevel=0
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" nvim-tree
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open
+let g:nvim_tree_git_hl = 1 "0 by default, will enable file highlight for git attributes (can be used without the icons).
+let g:nvim_tree_highlight_opened_files = 1 "0 by default, will enable folder and file icon highlight for opened files/directories.
+let g:nvim_tree_root_folder_modifier = ':~' "This is the default. See :help filename-modifiers for more options
+let g:nvim_tree_add_trailing = 1 "0 by default, append a trailing slash to folder names
+let g:nvim_tree_group_empty = 1 " 0 by default, compact folders that only contain a single folder into one node in the file tree
+let g:nvim_tree_icon_padding = ' ' "one space by default, used for rendering the space between the icon and the filename. Use with caution, it could break rendering if you set an empty string depending on your font.
+let g:nvim_tree_symlink_arrow = ' >> ' " defaults to ' ? '. used as a separator between symlinks' source and target.
+let g:nvim_tree_respect_buf_cwd = 1 "0 by default, will change cwd of nvim-tree to that of new buffer's when opening nvim-tree.
+let g:nvim_tree_create_in_closed_folder = 1 "0 by default, When creating files, sets the path of a file when cursor is on a closed folder to the parent folder when 0, and inside the folder when 1.
+let g:nvim_tree_special_files = { 'README.md': 1, 'Makefile': 1, 'MAKEFILE': 1 } " List of filenames that gets highlighted with NvimTreeSpecialFile
+let g:nvim_tree_show_icons = {
+    \ 'git': 1,
+    \ 'folders': 0,
+    \ 'files': 0,
+    \ 'folder_arrows': 0,
+    \ }
+"If 0, do not show the icons for one of 'git' 'folder' and 'files'
+"1 by default, notice that if 'files' is 1, it will only display
+"if nvim-web-devicons is installed and on your runtimepath.
+"if folder is 1, you can also tell folder_arrows 1 to show small arrows next to the folder icons.
+"but this will not work when you set indent_markers (because of UI conflict)
+
+" default will show icon by default if no icon is provided
+" default shows no icon by default
+let g:nvim_tree_icons = {
+    \ 'default': '?',
+    \ 'symlink': '?',
+    \ 'git': {
+    \   'unstaged': "?",
+    \   'staged': "?",
+    \   'unmerged': "?",
+    \   'renamed': "?",
+    \   'untracked': "?",
+    \   'deleted': "?",
+    \   'ignored': "?"
+    \   },
+    \ 'folder': {
+    \   'arrow_open': "?",
+    \   'arrow_closed': "?",
+    \   'default': "?",
+    \   'open': "?",
+    \   'empty': "?",
+    \   'empty_open': "?",
+    \   'symlink': "?",
+    \   'symlink_open': "?",
+    \   }
+    \ }
+
+nnoremap <C-n> :NvimTreeToggle<CR>
+nnoremap <leader>r :NvimTreeRefresh<CR>
+nnoremap <leader>n :NvimTreeFindFile<CR>
+" NvimTreeOpen, NvimTreeClose, NvimTreeFocus, NvimTreeFindFileToggle, and NvimTreeResize are also available if you need them
+
+" a list of groups can be found at `:help nvim_tree_highlight`
+highlight NvimTreeFolderIcon guibg=blue
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" lsp-config.nvim
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+lua << EOF
+local opts = { noremap=true, silent=true }
+local on_attach = function(client, bufnr)
+  -- Mappings.
+  -- See `:help vim.lsp.*` for documentation on any of the below functions
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-]>', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+end
+
+require'lspconfig'.elixirls.setup{
+  cmd = { "/Users/dino/Developer/elixir-ls/release/language_server.sh" };
+  on_attach = on_attach
+}
+
+require'nvim-tree'.setup()
+EOF

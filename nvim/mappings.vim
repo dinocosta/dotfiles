@@ -42,9 +42,6 @@ nmap <Leader>d :bd<CR>
 " Close quickfix window with Leader+x.
 map <Leader>x :cclose<CR>
 
-" Toogle NERDTree with Ctrl+N.
-map <silent> <C-N> :NERDTreeToggle<CR>
-
 " Toggle fugitive window with Leader+g.
 nnoremap <Leader>g :G<CR>
 
@@ -56,20 +53,9 @@ nnoremap <Leader>g :G<CR>
 "   of the window instead of the bottom.
 " * 'window': 'call CreateCenteredFloatingWindow()' -> Calls the provided
 "   function in order to create the FZF window.
-nmap <C-P> :call fzf#vim#files('.', {'options': '--prompt "" --layout=reverse', 'window': 'call CreateCenteredFloatingWindow()'})<CR>
-nmap <Leader>; :call fzf#vim#files('.', {'options': '--prompt "" --layout=reverse', 'window': 'call CreateCenteredFloatingWindow()'})<CR>
+nmap <silent> <C-P> :call fzf#vim#files('.', {'options': '--prompt "" --layout=reverse', 'window': 'call CreateCenteredFloatingWindow()'})<CR>
+nmap <silent> <Leader>; :call fzf#vim#files('.', {'options': '--prompt "" --layout=reverse', 'window': 'call CreateCenteredFloatingWindow()'})<CR>
 
 " Jump to definition with Ctrl+]
 nmap <silent> <C-]> <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
-
-" Fetch documentation.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction

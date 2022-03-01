@@ -117,3 +117,5 @@ set noruler
 " Enable live substitution, you'll be able to see the substitution happening
 " as you use the %s command.
 set inccommand=split
+
+command MixTest :! mix test %:p
