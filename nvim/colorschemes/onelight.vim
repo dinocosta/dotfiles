@@ -20,6 +20,31 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Function']}
 
+
 lua << EOF
-require'lualine'.setup { options = { theme = 'onelight' } }
+-- Helper function which, given a Highlight Group and the attribute will
+-- return that attribute's value.
+-- This is used to fetch the `fg#` value of some highlight groups in order to
+-- change the colors used in Lualine for the git diff section.
+local fn = vim.fn
+local function get_color(group, attr)
+  return fn.synIDattr(fn.synIDtrans(fn.hlID(group)), attr)
+end
+
+require'lualine'.setup {
+  -- Sets lualine's theme to onelight.
+  options = { theme = 'onelight' },
+  sections = {
+    lualine_b = {
+      'branch',
+      { 'diff', diff_color = {
+          added     = { fg = get_color('String', 'fg#')   },
+          modified  = { fg = get_color('Type', 'fg#')     },
+          removed   = { fg = get_color('Keyword', 'fg#')  },
+        }
+      },
+      'diagnostics'
+    },
+  }
+}
 EOF
