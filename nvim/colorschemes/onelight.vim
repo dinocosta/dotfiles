@@ -2,7 +2,7 @@ set termguicolors
 syntax on
 set t_Co=256
 colorscheme one
-set background=dark
+set background=light
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
@@ -21,5 +21,5 @@ let g:fzf_colors =
   \ 'header':  ['fg', 'Function']}
 
 lua << EOF
-require'lualine'.setup { options = { theme = 'onedark' } }
+require'lualine'.setup { options = { theme = 'onelight' } }
 EOF
