@@ -17,6 +17,12 @@ Plug 'chriskempson/base16-vim'
 " A dark Vim/Neovim color scheme inspired by Atom's One Dark syntax theme.
 Plug 'joshdick/onedark.vim'
 
+" Adaptation of one-light and one-dark colorschemes for Vim.
+Plug 'rakr/vim-one'
+
+" A blazing fast and easy to configure neovim statusline plugin written in pure lua.
+Plug 'nvim-lualine/lualine.nvim'
+
 " fugitive.vim: a Git wrapper so awesome, it should be illegal
 Plug 'tpope/vim-fugitive'
 
@@ -37,9 +43,6 @@ Plug 'honza/vim-snippets'
 
 " unimpaired.vim: Pairs of handy bracket mappings.
 Plug 'tpope/vim-unimpaired'
-
-" Functions for taking the monotony out of building your own fancy statusline in Vim
-Plug 'rbong/vim-crystalline'
 
 " surround.vim: quoting/parenthesizing made simple
 Plug 'tpope/vim-surround'
@@ -133,11 +136,6 @@ autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" crystalline
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:crystalline_separators=['', '']
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " markdown-preview.nvim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -228,4 +226,14 @@ require'lspconfig'.elixirls.setup{
 }
 
 require'nvim-tree'.setup()
+
+require'lualine'.setup {
+  options = {
+    section_separators = '',
+    component_separators = ''
+  },
+  sections = {
+    lualine_x = {'encoding', 'filetype'}
+  }
+}
 EOF
