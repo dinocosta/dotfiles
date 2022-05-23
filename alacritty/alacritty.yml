@@ -52,7 +52,7 @@ window:
   #     - none: Neither borders nor title bar
   #     - buttonless: Title bar, transparent background and title bar buttons
   #     - transparent: Title bar, transparent background, but no title bar buttons
-  decorations: none
+  decorations: buttonless
 
   # When true, alacritty starts maximized.
   startup_mode: Maximized
@@ -64,23 +64,23 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: Iosevka
+    family: Iosevka Term SS07
     # Style can be specified to pick a specific face.
     style: Regular
   # The bold font face
   bold:
-    family: Iosevka
+    family: Iosevka Term SS07
     # Style can be specified to pick a specific face.
-    style: Semibold
+    style: Bold
 
   # The italic font face
   italic:
-    family: Iosevka
+    family: Iosevka Term SS07
     # Style can be specified to pick a specific face.
     style: Italic
 
   # Point size of the font
-  size: 14
+  size: 13
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
@@ -275,7 +275,28 @@ color_schemes:
       cyan:    '0x56b6c2'
       white:   '0xffffff'
 
-colors: *gruvboxlight
+  # Colors (One Light)
+  onelight: &onelight
+    primary:
+      background: '#fafafa'
+      foreground: '#383a42'
+    cursor:
+      text:       CellBackground
+      cursor:     '#526eff' # syntax-cursor-color
+    selection:
+      text:       CellForeground
+      background: '#e5e5e6' # syntax-selection-color
+    normal:
+      black:      '#696c77' # mono-2
+      red:        '#e45649' # red 1
+      green:      '#50a14f'
+      yellow:     '#c18401' # orange 2
+      blue:       '#4078f2'
+      magenta:    '#a626a4'
+      cyan:       '#0184bc'
+      white:      '#a0a1a7' # mono-3
+
+colors: *onehalflight
 
 # Visual Bell
 #
@@ -304,7 +325,7 @@ bell:
   duration: 0
 
 # Background opacity
-background_opacity: 1.0
+window.opacity: 1.0
 
 # Mouse bindings
 #
@@ -335,19 +356,6 @@ mouse:
 
   # If this is `true`, the cursor is temporarily hidden when typing.
   hide_when_typing: false
-
-  url:
-    # URL launcher
-    #
-    # This program is executed when clicking on a text which is recognized as a URL.
-    # The URL is always added to the command as the last parameter.
-    launcher: open
-
-    # URL modifiers
-    #
-    # These are the modifiers that need to be held down for opening URLs when clicking
-    # on them. The available modifiers are documented in the key binding section.
-    #modifiers: Control|Shift
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
