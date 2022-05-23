@@ -1,4 +1,4 @@
 {
-  "elixirLS.dialyzerEnabled": false,
-  "elixir.pathToElixirLS": "/Users/dino/Developer/elixir-ls/release/language_server.sh"
+  "elixirLS.dialyzerEnabled": true,
+  "elixir.pathToElixirLS": "/Users/dino/Developer/elixir-ls/language_server.sh"
 }

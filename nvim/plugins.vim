@@ -220,20 +220,18 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
-require'lspconfig'.elixirls.setup{
-  cmd = { "/Users/dino/Developer/elixir-ls/release/language_server.sh" };
-  on_attach = on_attach
-}
-
 require'nvim-tree'.setup()
 
 require'lualine'.setup {
-  options = {
-    section_separators = '',
-    component_separators = ''
-  },
+  options = { section_separators = '', component_separators = '' },
   sections = {
     lualine_x = {'encoding', 'filetype'}
   }
 }
+
+require'lspconfig'.elixirls.setup{
+  on_attach = on_attach,
+  cmd = { "/Users/dino/Developer/elixir-ls/release/language_server.sh" },
+}
+
 EOF
