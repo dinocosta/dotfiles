@@ -27,7 +27,7 @@ export TERM='xterm-256color'
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/$USER/.oh-my-zsh
 
-source $DOTFILES/zsh/theme_dark.zsh
+source $DOTFILES/zsh/theme_light.zsh
 source $DOTFILES/functions/aliases.zsh
 source $DOTFILES/functions/personal.zsh
 
@@ -157,7 +157,7 @@ lesscolors=$HOME/bin/.LESS_TERMCAP
 [[ -f $lesscolors ]] && . $lesscolors
 
 # asdf
-. /usr/local/opt/asdf/asdf.sh
+. /usr/local/opt/asdf/libexec/asdf.sh
 . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"

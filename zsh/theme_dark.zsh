@@ -24,3 +24,6 @@ export SPACESHIP_GIT_PREFIX="⬢ "
 export SPACESHIP_VENV_COLOR="green"
 export SPACESHIP_ELIXIR_SYMBOL=""
 export SPACESHIP_GIT_SYMBOL=""
+
+# Set bat's theme to OneHalfDark.
+export BAT_THEME="OneHalfDark"
