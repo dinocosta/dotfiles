@@ -8630,7 +8630,33 @@
               },
               {
                 "type": "basic",
-                "description": "Option + h move focus to window on the left.",
+                "description": "Option + D to fill current space.",
+                "from": {
+                  "key_code": "d",
+                  "modifiers": { "mandatory": [ "option" ] }
+                },
+                "to": [
+                  {
+                    "shell_command": "/usr/local/bin/yabai -m window --toggle zoom-parent"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "description": "Option + F to fullscreen window.",
+                "from": {
+                  "key_code": "f",
+                  "modifiers": { "mandatory": [ "option" ] }
+                },
+                "to": [
+                  {
+                    "shell_command": "/usr/local/bin/yabai -m window --toggle zoom-fullscreen"
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "description": "Option + H move focus to window on the left.",
                 "from": {
                   "key_code": "h",
                   "modifiers": { "mandatory": [ "option" ] }
@@ -8643,7 +8669,7 @@
               },
               {
                 "type": "basic",
-                "description": "Option + j move focus to window below.",
+                "description": "Option + J move focus to window below.",
                 "from": {
                   "key_code": "j",
                   "modifiers": { "mandatory": [ "option" ] }
@@ -8656,7 +8682,7 @@
               },
               {
                 "type": "basic",
-                "description": "Option + k move focus to window on top.",
+                "description": "Option + K move focus to window on top.",
                 "from": {
                   "key_code": "k",
                   "modifiers": { "mandatory": [ "option" ] }
@@ -8669,7 +8695,7 @@
               },
               {
                 "type": "basic",
-                "description": "Option + l move focus to window on the right.",
+                "description": "Option + L move focus to window on the right.",
                 "from": {
                   "key_code": "l",
                   "modifiers": { "mandatory": [ "option" ] }
