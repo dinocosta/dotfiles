@@ -16,11 +16,6 @@ LC_IDENTIFICATION="en_US.UTF-8"
 LC_ALL=
 LANGUAGE=
 
-# Terminal Type.
-# export TERM='screen-256color'
-# When using iTerm2 prefer this one:
-export TERM='xterm-256color'
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -137,7 +132,7 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@13/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Real vim
