@@ -99,7 +99,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-# .zshrc
+
+# ASDF
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
 fpath+=/opt/homebrew/share/zsh/site-functions
 autoload -U promptinit; promptinit
 prompt pure
