@@ -48,6 +48,10 @@ local plugins = {
     },
     {
         'nvim-lualine/lualine.nvim'
+    },
+    {
+        'L3M0N4D3/LuaSnip',
+        depencies = { 'rafamadriz/friendly-snippets' }
     }
 }
 
