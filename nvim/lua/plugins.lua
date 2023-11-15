@@ -51,7 +51,10 @@ local plugins = {
     },
     {
         'L3M0N4D3/LuaSnip',
-        depencies = { 'rafamadriz/friendly-snippets' }
+        dependencies = { 
+            'rafamadriz/friendly-snippets',
+            'honza/vim-snippets'
+        }
     }
 }
 

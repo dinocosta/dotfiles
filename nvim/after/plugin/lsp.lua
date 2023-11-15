@@ -50,7 +50,9 @@ local cmp_mappings = lsp_zero.defaults.cmp_mappings({
 cmp_mappings['<Tab>'] = nil
 cmp_mappings['<S-Tab>'] = nil
 
+-- Add both and 'rafamadriz/friendly-snippets' as 'honza/vim-snippets' sources for LuaSnip.
 require('luasnip.loaders.from_vscode').lazy_load()
+require('luasnip.loaders.from_snipmate').lazy_load()
 
 cmp.setup({
     sources = {
