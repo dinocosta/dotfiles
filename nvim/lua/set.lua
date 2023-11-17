@@ -39,3 +39,7 @@ vim.g.mapleader = " "
 
 -- Use system clipboard.
 vim.opt.clipboard = 'unnamedplus'
+
+-- Setup folding.
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
