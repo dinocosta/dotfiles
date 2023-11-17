@@ -9,7 +9,9 @@ require('nvim-tree').setup({
                 -- Disable webdev icons for files.
                 file = false,
             },
-        }
+        },
+        -- Show only the current folder name as the root.
+        root_folder_label = ":t:r"
     }
 })
 
