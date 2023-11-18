@@ -25,10 +25,7 @@ vim.opt.backup      = false
 vim.opt.undodir     = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile    = true
 
--- Disabling vim.opt.hlsearch makes sure only the current match is highlighted,
--- instead of all the matches.
 -- Enabling vim.opt.incrsearch higlights the word as you're typing the search term.
-vim.opt.hlsearch    = false
 vim.opt.incsearch   = true
 
 -- Enable Terminal's GUI colors.
@@ -43,3 +40,4 @@ vim.opt.clipboard = 'unnamedplus'
 -- Setup folding.
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldlevel = 99

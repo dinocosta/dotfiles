@@ -55,6 +55,10 @@ local plugins = {
             'rafamadriz/friendly-snippets',
             'honza/vim-snippets'
         }
+    },
+    {
+        -- A vim plugin to display the indention levels with thin vertical lines.
+        'Yggdroot/indentLine'
     }
 }
 
