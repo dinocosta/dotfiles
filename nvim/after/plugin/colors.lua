@@ -1,4 +1,4 @@
-vim.cmd.colorscheme('catppuccin-latte')
+vim.cmd.colorscheme('rose-pine')
 
 -- Do not display the tilde (~) character on empty lines.
 -- This needs to be called after the `colorscheme` command is called, otherwise it will be overriden.
