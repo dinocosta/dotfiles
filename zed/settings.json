@@ -7,7 +7,13 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "base_keymap": "VSCode",
+  "project_panel": {
+    "dock": "left"
+  },
+  "terminal": {
+    "dock": "bottom",
+    "font_family": "Berkeley Mono"
+  },
   "theme": "Ayu Light",
   "telemetry": {
     "diagnostics": false,
@@ -15,12 +21,19 @@
   },
   "vim_mode": true,
   "ui_font_size": 12,
-  "buffer_font_size": 12,
   "ui_font_family": "Berkeley Mono",
+  "buffer_font_size": 12,
   "buffer_font_family": "Berkeley Mono",
-  "terminal": {
-    "font_family": "Berkeley Mono",
-    "font_size": 12
-  },
-  "relative_line_numbers": true
+  "relative_line_numbers": true,
+  "preferred_line_length": 120,
+  "language_overrides": {
+    "Elixir": {
+      "format_on_save": {
+        "external": {
+          "command": "mix",
+          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
+        }
+      }
+    }
+  }
 }
