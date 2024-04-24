@@ -133,20 +133,27 @@ source $ZSH/oh-my-zsh.sh
 #     --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8"
 
 ## Ayu Light
-# export FZF_DEFAULT_OPTS="
-# 	--color=fg:#5b6673,bg:#fafafa,hl:#ff3333
-# 	--color=fg+:#5b6673,bg+:#F3F4F5,hl+:#ff3333
-# 	--color=border:#323232,header:#73d7ff,gutter:#fafafa
-# 	--color=spinner:#f19618,info:#41a6d9,separator:#323232
-# 	--color=pointer:#4cbe99,marker:#f19618,prompt:#41a6d9"
+export FZF_DEFAULT_OPTS="
+	--color=fg:#5C6166,bg:#FCFCFC,hl:#FA8D3E
+	--color=fg+:#5C6166,bg+:#F3F4F5,hl+:#FA8D3E
+	--color=border:#323232,header:#73d7ff,gutter:#FCFCFC
+	--color=spinner:#f19618,info:#41a6d9,separator:#323232"
 
 ## Ayu Mirage
-export FZF_DEFAULT_OPTS="
-	--color=fg:#cccac2,bg:#242936,hl:#ff6666
-	--color=fg+:#cccac2,bg+:#242936,hl+:#ff6666
-	--color=border:#cccac2,header:#80bfff,gutter:#242936
-	--color=spinner:#ffcc66,info:#ffcc66,separator:#cccac2
-	--color=pointer:#80bfff,marker:#ffcc66,prompt:#80bfff"
+# export FZF_DEFAULT_OPTS="
+#  	--color=fg:#cccac2,bg:#242936,hl:#ff6666
+#  	--color=fg+:#cccac2,bg+:#242936,hl+:#ff6666
+#  	--color=border:#cccac2,header:#80bfff,gutter:#242936
+#  	--color=spinner:#ffcc66,info:#ffcc66,separator:#cccac2
+#  	--color=pointer:#80bfff,marker:#ffcc66,prompt:#80bfff"
+
+## Ayu Dark
+# export FZF_DEFAULT_OPTS="
+#    	--color=fg:#BFBDB6,bg:#0D1017,hl:#D95757
+#    	--color=fg+:#BFBDB6,bg+:#0D1017,hl+:#D95757
+#    	--color=border:#BFBDB6,header:#73B8FF,gutter:#0D1017
+#    	--color=spinner:#E6B450,info:#E6B450,separator:#BFBDB6
+#    	--color=pointer:#73B8FF,marker:#E6B450,prompt:#73B8FF"
 
 
 # Flexoki Light.
