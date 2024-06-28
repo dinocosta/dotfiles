@@ -16,4 +16,4 @@ require('nvim-tree').setup({
 })
 
 -- Toggle NvimTree with Ctrl + N.
-vim.keymap.set('n', '<C-n>', '<cmd>NvimTreeToggle<cr>')
+vim.keymap.set('n', '<C-n>', '<cmd>NvimTreeFindFileToggle<cr>')
