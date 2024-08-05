@@ -105,12 +105,12 @@ source $ZSH/oh-my-zsh.sh
 # ----------
 
 ## Rosé Pine Dawn
-# export FZF_DEFAULT_OPTS="
-# 	--color=fg:#797593,bg:#faf4ed,hl:#d7827e
-# 	--color=fg+:#575279,bg+:#f2e9e1,hl+:#d7827e
-# 	--color=border:#dfdad9,header:#286983,gutter:#faf4ed
-# 	--color=spinner:#ea9d34,info:#56949f,separator:#dfdad9
-# 	--color=pointer:#907aa9,marker:#b4637a,prompt:#797593"
+export FZF_DEFAULT_OPTS="
+	--color=fg:#797593,bg:#faf4ed,hl:#d7827e
+	--color=fg+:#575279,bg+:#f2e9e1,hl+:#d7827e
+	--color=border:#dfdad9,header:#286983,gutter:#faf4ed
+	--color=spinner:#ea9d34,info:#56949f,separator:#dfdad9
+	--color=pointer:#907aa9,marker:#b4637a,prompt:#797593"
 
 ## Rosé Pine
 # export FZF_DEFAULT_OPTS="
@@ -141,12 +141,12 @@ source $ZSH/oh-my-zsh.sh
 # 	--color=pointer:#4cbe99,marker:#f19618,prompt:#41a6d9"
 
 ## Ayu Mirage
-export FZF_DEFAULT_OPTS="
-	--color=fg:#cccac2,bg:#242936,hl:#ff6666
-	--color=fg+:#cccac2,bg+:#242936,hl+:#ff6666
-	--color=border:#cccac2,header:#80bfff,gutter:#242936
-	--color=spinner:#ffcc66,info:#ffcc66,separator:#cccac2
-	--color=pointer:#80bfff,marker:#ffcc66,prompt:#80bfff"
+# export FZF_DEFAULT_OPTS="
+# 	--color=fg:#cccac2,bg:#242936,hl:#ff6666
+# 	--color=fg+:#cccac2,bg+:#242936,hl+:#ff6666
+# 	--color=border:#cccac2,header:#80bfff,gutter:#242936
+# 	--color=spinner:#ffcc66,info:#ffcc66,separator:#cccac2
+# 	--color=pointer:#80bfff,marker:#ffcc66,prompt:#80bfff"
 
 
 # Flexoki Light.
@@ -180,7 +180,7 @@ fpath+=/opt/homebrew/share/zsh/site-functions
 autoload -U promptinit; promptinit
 prompt pure
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source <(fzf --zsh)
 
 # Load direnv.
 eval "$(direnv hook zsh)"
