@@ -328,6 +328,11 @@ pp_info "Updating Karabiner configuration..."
 dirlink karabiner ~/.config/karabiner
 pp_success "Karabiner configuration updated."
 
+# Link FZF configuration.
+pp_info "Updating fzf configuration..."
+dirlink fzf ~/.config/fzf
+pp_success "fzf configuration updated."
+
 # -------------------------------------------------------------------------
 # App Store Apps
 # -------------------------------------------------------------------------
