@@ -26,6 +26,18 @@ local plugins = {
         'catppuccin/nvim'
     },
     {
+        -- Ayu theme for Neovim.
+        'shatur/neovim-ayu'
+    },
+    {
+        -- Flexoki color scheme for Neovim.
+        'kepano/flexoki-neovim'
+    },
+    {
+        -- Neovim theme based off of the Nord Color Palette, written in lua with tree sitter support
+        'shaunsingh/nord.nvim'
+    },
+    {
         'nvim-treesitter/nvim-treesitter'
     },
     {
@@ -64,6 +76,18 @@ local plugins = {
     {
         -- A vim plugin to display the indention levels with thin vertical lines.
         'Yggdroot/indentLine'
+    },
+    {
+        -- projectionist.vim: Granular project configuration.
+        'tpope/vim-projectionist'
+    },
+    {
+        -- The fastest Neovim colorizer.
+        'norcalli/nvim-colorizer.lua'
+    },
+    {
+        -- Neovim plugin for GitHub Copilot.
+        'github/copilot.vim'
     }
 }
 

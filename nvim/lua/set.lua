@@ -41,3 +41,6 @@ vim.opt.clipboard = 'unnamedplus'
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldlevel = 99
+
+-- Enable cursorline so the current line is always highlighted.
+vim.opt.cursorline = true

@@ -429,5 +429,8 @@ install_app "DevDocs" "brew cask install devdocs"
 # Monitor Control
 install_app "Monitor Control" "brew install monitorcontrol"
 
+# ICE
+install_app "ICE" "brew install jordanbaird-ice""
+
 # Videostream.
 install_app "Videostream" "brew cask install videostream"
