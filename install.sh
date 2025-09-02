@@ -347,6 +347,12 @@ rm -rf ~/.config/aerospace
 dirlink aerospace ~/.config/aerospace
 pp_success "Aerospace configuration updated."
 
+# Link git's configuration.
+pp_info "Updating git configuration..."
+rm ~/.gitconfig
+ln $DOTFILES/.gitconfig ~/.gitconfig
+pp_success "git configuration updated."
+
 # -------------------------------------------------------------------------
 # App Store Apps
 # -------------------------------------------------------------------------
