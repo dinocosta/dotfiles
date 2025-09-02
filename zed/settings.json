@@ -4,35 +4,73 @@
 // documentation: https://zed.dev/docs/configuring-zed
 //
 // To see all of Zed's default settings without changing your
-// custom settings, run the `open default settings` command
-// from the command palette or from `Zed` application menu.
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "project_panel": {
-    "dock": "left"
+  "agent": {
+    "default_profile": "ask"
+  },
+  // Enable inline diagnostics so diagnostics are automatically displayed in the
+  // editor.
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  },
+  "relative_line_numbers": true,
+  "vim_mode": true,
+  "ui_font_family": ".SystemUIFont",
+  "ui_font_size": 12.0,
+  "agent_font_size": 15.0,
+  "theme": {
+    "mode": "system",
+    "light": "Zedokai Light",
+    "dark": "Zedokai"
   },
   "terminal": {
-    "dock": "bottom",
-    "font_family": "Berkeley Mono"
+    "dock": "right",
+    // CommitMono Font Configuration - Terminal.
+    "font_family": "CommitMono",
+    "font_weight": 450,
+    "font_size": 12.0,
+    "font_features": {
+      "ss01": true,
+      "ss02": true,
+      "ss03": true,
+      "ss04": true,
+      "ss05": true,
+      "cv01": true,
+      "cv02": true,
+      "cv08": true,
+      "cv10": true
+    }
   },
-  "theme": "Ayu Light",
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false
+  // CommitMono Font Configuration - Buffer.
+  "buffer_font_family": "CommitMono",
+  "buffer_font_weight": 450,
+  "buffer_font_size": 12.0,
+  "buffer_font_features": {
+    "ss01": true,
+    "ss02": true,
+    "ss03": true,
+    "ss04": true,
+    "ss05": true,
+    "cv01": true,
+    "cv02": true,
+    "cv08": true,
+    "cv10": true
   },
-  "vim_mode": true,
-  "ui_font_size": 12,
-  "ui_font_family": "Berkeley Mono",
-  "buffer_font_size": 12,
-  "buffer_font_family": "Berkeley Mono",
-  "relative_line_numbers": true,
-  "preferred_line_length": 120,
-  "language_overrides": {
-    "Elixir": {
-      "format_on_save": {
-        "external": {
-          "command": "mix",
-          "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
-        }
+  "experimental.theme_overrides": {
+    "syntax": {
+      // Always use italics for comments, regardless of the theme being used.
+      "comment": { "font_style": "italic" },
+      "comment.doc": { "font_style": "italic" },
+      // Flexoki Theme Overrides
+      "variable": {
+        // Flexoki Light.
+        // "color": "#100F0F"
+        // Flexoki Dark.
+        // "color": "#CECDC3"
       }
     }
   }

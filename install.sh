@@ -333,6 +333,14 @@ pp_info "Updating fzf configuration..."
 dirlink fzf ~/.config/fzf
 pp_success "fzf configuration updated."
 
+# Link Zed's configuration.
+pp_info "Updating Zed configuration..."
+rm ~/.config/zed/settings.json
+rm ~/.config/zed/keymap.json
+ln $DOTFILES/zed/settings.json ~/.config/zed/settings.json
+ln $DOTFILES/zed/keymap.json ~/.config/zed/keymap.json
+pp_success "Zed configuration updated."
+
 # -------------------------------------------------------------------------
 # App Store Apps
 # -------------------------------------------------------------------------
