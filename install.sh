@@ -341,6 +341,12 @@ ln $DOTFILES/zed/settings.json ~/.config/zed/settings.json
 ln $DOTFILES/zed/keymap.json ~/.config/zed/keymap.json
 pp_success "Zed configuration updated."
 
+# Link Aerospaces's configuration.
+pp_info "Updating Aerospace configuration..."
+rm -rf ~/.config/aerospace
+dirlink aerospace ~/.config/aerospace
+pp_success "Aerospace configuration updated."
+
 # -------------------------------------------------------------------------
 # App Store Apps
 # -------------------------------------------------------------------------
