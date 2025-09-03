@@ -120,3 +120,6 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # syntax highlighting (zsh-syntax-highlighting).
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# mise-en-place.
+eval "$(~/.local/bin/mise activate zsh)"
