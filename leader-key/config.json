@@ -1,0 +1,134 @@
+{
+  "actions" : [
+    {
+      "actions" : [
+        {
+          "key" : "z",
+          "label" : "Zed",
+          "type" : "application",
+          "value" : "/Applications/Zed.app"
+        },
+        {
+          "key" : "a",
+          "label" : "Arc",
+          "type" : "application",
+          "value" : "/Applications/Arc.app"
+        },
+        {
+          "key" : "n",
+          "label" : "Notion",
+          "type" : "application",
+          "value" : "/Applications/Notion.app"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "a",
+              "label" : "Mail",
+              "type" : "application",
+              "value" : "/System/Applications/Mail.app"
+            },
+            {
+              "key" : "e",
+              "label" : "Messages",
+              "type" : "application",
+              "value" : "/System/Applications/Messages.app"
+            }
+          ],
+          "key" : "m",
+          "label" : "Mail, Messages",
+          "type" : "group"
+        },
+        {
+          "key" : "t",
+          "label" : "Things",
+          "type" : "application",
+          "value" : "/Applications/Things3.app"
+        },
+        {
+          "key" : "d",
+          "label" : "Dia",
+          "type" : "application",
+          "value" : "/Applications/Dia.app"
+        },
+        {
+          "key" : "s",
+          "label" : "Spotify",
+          "type" : "application",
+          "value" : "/Applications/Spotify.app"
+        }
+      ],
+      "key" : "a",
+      "label" : "Applications",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "e",
+          "label" : "Emoji",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
+        },
+        {
+          "key" : "s",
+          "label" : "Screensaver",
+          "type" : "url",
+          "value" : "raycast://extensions/koinzhang/screen-saver/start-screen-saver"
+        },
+        {
+          "key" : "i",
+          "label" : "Improve Writing",
+          "type" : "url",
+          "value" : "raycast://ai-commands/improve-writing"
+        },
+        {
+          "key" : "c",
+          "label" : "Calendar",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/calendar/my-schedule"
+        },
+        {
+          "key" : "t",
+          "type" : "url",
+          "value" : "raycast://extensions/loris/things/show-today-list"
+        }
+      ],
+      "key" : "r",
+      "label" : "Raycast",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "s",
+          "label" : "Start",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/raycast-focus/start-focus-session"
+        },
+        {
+          "key" : "p",
+          "label" : "Pause",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/raycast-focus/pause-focus-session"
+        },
+        {
+          "key" : "r",
+          "label" : "Resume",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/raycast-focus/resume-focus-session"
+        },
+        {
+          "key" : "c",
+          "label" : "Complete",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/raycast-focus/complete-focus-session"
+        }
+      ],
+      "key" : "f",
+      "label" : "Raycast Focus",
+      "type" : "group"
+    }
+  ],
+  "type" : "group"
+}

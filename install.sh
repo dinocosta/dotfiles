@@ -455,7 +455,16 @@ install_app "DevDocs" "brew cask install devdocs"
 install_app "Monitor Control" "brew install monitorcontrol"
 
 # ICE
-install_app "ICE" "brew install jordanbaird-ice""
+install_app "ICE" "brew install jordanbaird-ice"
+
+# Leader Key
+install_app "Leader Key" "brew install leader-key"
+
+# Link Leader Key's Configuration.
+pp_info "Updating Leader Key configuration..."
+rm ~/Library/Application\ Support/Leader\ Key/config.json
+ln $DOTFILES/leader-key/config.json ~/Library/Application\ Support/Leader\ Key/config.json
+pp_success "Leader Key configuration updated."
 
 # Videostream.
 install_app "Videostream" "brew cask install videostream"
