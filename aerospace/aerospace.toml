@@ -173,3 +173,8 @@ shift-down = ['volume set 0', 'mode main']
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
 run = 'layout floating'
+
+# Automatically float Messages app.
+[[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS'
+run = 'layout floating'
