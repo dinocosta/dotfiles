@@ -103,6 +103,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias zedn="~/.local/bin/zed"
+
 # Load `pure` prompt.
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
 autoload -U promptinit; promptinit
@@ -112,8 +114,14 @@ prompt pure
 eval "$(/Users/dino/.local/bin/mise activate zsh)"
 
 # fzf.
+# Theme will be set depending on MacOS's Appearance.
 source <(fzf --zsh)
-source $HOME/.config/fzf/zedokai_light.sh
+if osascript -e 'tell application "System Events" to tell appearance preferences to return dark mode' | grep -q "true"; then
+    source $HOME/.config/fzf/zedokai.sh
+else
+    source $HOME/.config/fzf/zedokai_light.sh
+fi
+
 
 # fish-like suggestions (zsh-autosuggestions).
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
