@@ -7,71 +7,400 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "agent": {
-    "default_profile": "ask"
-  },
-  // Enable inline diagnostics so diagnostics are automatically displayed in the
-  // editor.
-  "diagnostics": {
-    "inline": {
-      "enabled": true
-    }
-  },
-  "relative_line_numbers": true,
-  "vim_mode": true,
-  "ui_font_family": ".SystemUIFont",
-  "ui_font_size": 12.0,
-  "agent_font_size": 15.0,
-  "theme": {
-    "mode": "system",
-    "light": "Zedokai Light",
-    "dark": "Zedokai"
-  },
-  "terminal": {
+  "project_panel": {
     "dock": "right",
-    // CommitMono Font Configuration - Terminal.
-    "font_family": "CommitMono",
-    "font_weight": 450,
-    "font_size": 12.0,
-    "font_features": {
-      "ss01": true,
-      "ss02": true,
-      "ss03": true,
-      "ss04": true,
-      "ss05": true,
-      "cv01": true,
-      "cv02": true,
-      "cv08": true,
-      "cv10": true
-    }
   },
-  // CommitMono Font Configuration - Buffer.
-  "buffer_font_family": "CommitMono",
-  "buffer_font_weight": 450,
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "git_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "cli_default_open_behavior": "new_window",
+  "ssh_connections": [
+    {
+      "host": "localhost",
+      "username": "dino",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/Users/dino/Developer/zed/./"],
+        },
+      ],
+    },
+    {
+      "host": "localhost",
+      "username": "dino",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/Users/dino/Developer"],
+        },
+        {
+          "paths": ["/Users/dino/Developer/bar/./"],
+        },
+        {
+          "paths": ["/Users/dino/Developer/zed.dev"],
+        },
+      ],
+    },
+  ],
+  "agent": {
+    "dock": "right",
+    "default_profile": "write",
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-opus-4-7",
+      "enable_thinking": true,
+      "effort": "high",
+    },
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "ui_font_size": 14.0,
   "buffer_font_size": 12.0,
-  "buffer_font_features": {
-    "ss01": true,
-    "ss02": true,
-    "ss03": true,
-    "ss04": true,
-    "ss05": true,
-    "cv01": true,
-    "cv02": true,
-    "cv08": true,
-    "cv10": true
+  "buffer_font_weight": 450,
+  "terminal": {
+    "font_size": 12.0,
+    "font_weight": 450,
   },
-  "experimental.theme_overrides": {
-    "syntax": {
-      // Always use italics for comments, regardless of the theme being used.
-      "comment": { "font_style": "italic" },
-      "comment.doc": { "font_style": "italic" },
-      // Flexoki Theme Overrides
-      "variable": {
-        // Flexoki Light.
-        // "color": "#100F0F"
-        // Flexoki Dark.
-        // "color": "#CECDC3"
-      }
-    }
-  }
+  "nightly": {
+    "tab_bar": {
+      "show_nav_history_buttons": false,
+      "show_tab_bar_buttons": false,
+    },
+    "show_wrap_guides": true,
+    "minimum_split_diff_width": 200.0,
+    "audio": {},
+    "outline_panel": {
+      "dock": "right",
+    },
+    "collaboration_panel": {
+      "dock": "left",
+    },
+    "diff_view_style": "split",
+    "agent_servers": {
+      "claude-acp": {
+        "type": "registry",
+      },
+      "github-copilot-cli": {
+        "type": "registry",
+      },
+    },
+    // When resizing a panel, ensure all panels in the same dock end up having the
+    // same size.
+    "resize_all_panels_in_dock": ["left", "bottom", "right"],
+    "languages": {
+      "Rust": {
+        "show_edit_predictions": true,
+        "wrap_guides": [100],
+      },
+    },
+    "semantic_tokens": "combined",
+    "edit_predictions": {
+      "provider": {
+        "experimental": "zeta2",
+      },
+    },
+    "base_keymap": "VSCode",
+    "git_panel": {
+      "dock": "left",
+      "sort_by_path": false,
+      "tree_view": true,
+    },
+    "search": {
+      "center_on_match": true,
+      "case_sensitive": false,
+      "regex": true,
+    },
+    "lsp": {
+      // Give rust-analyzer its own target directory so that we don't have to wait
+      // for LSP work that's done by Zed when trying to manually run cargo commands.
+      "rust-analyzer": {
+        "initialization_options": {
+          "cargo": {
+            "targetDir": true,
+          },
+        },
+        // "binary": {
+        //   "path": "/Users/dino/Developer/rust-analyzer/target/debug/rust-analyzer",
+        // },
+      },
+      // // Piotr's configuration.
+      // "rust-analyzer": {
+      //   "initialization_options": {
+      //     // "checkOnSave": false,
+      //     "check": {
+      //       "overrideCommand": ["cargo", "build", "--message-format=json"],
+      //     },
+      //   },
+      // },
+      "eslint": {
+        "settings": {
+          "rules": ["prettier/prettier"],
+        },
+      },
+    },
+    "show_whitespaces": "selection",
+    "vertical_scroll_margin": 0,
+    "project_panel": {
+      "git_status": true,
+      "git_status_indicator": true,
+      "hide_hidden": false,
+      "dock": "left",
+    },
+    "ssh_connections": [
+      {
+        "host": "165.227.187.43",
+        "username": "dino",
+        "args": [],
+        "projects": [],
+      },
+      {
+        "host": "localhost",
+        "username": "dino",
+        "args": [],
+        "projects": [
+          {
+            "paths": ["~/Developer/bar"],
+          },
+          {
+            "paths": ["~/Developer/zed.dev"],
+          },
+        ],
+      },
+    ],
+    "agent": {
+      "flexible": false,
+      "expand_edit_card": false,
+      "expand_terminal_card": false,
+      "dock": "left",
+      "show_turn_stats": true,
+      "inline_assistant_model": {
+        "provider": "zed.dev",
+        "model": "claude-sonnet-4-5",
+      },
+      "default_profile": "ask",
+      "commit_message_model": {
+        "provider": "zed.dev",
+        "model": "claude-haiku-4-5",
+      },
+      "default_model": {
+        "effort": "high",
+        "enable_thinking": true,
+        "provider": "zed.dev",
+        "model": "claude-opus-4-6",
+      },
+      "model_parameters": [],
+    },
+    // Enable inline diagnostics so diagnostics are automatically displayed in the
+    // editor.
+    "diagnostics": {
+      "inline": {
+        "enabled": true,
+      },
+    },
+    "relative_line_numbers": "enabled",
+    "ui_font_family": "Inter Variable",
+    "theme": {
+      "mode": "system",
+      "light": "Zedokai Light",
+      "dark": "Zedokai",
+    },
+    "terminal": {
+      "flexible": false,
+      "dock": "right",
+      "font_family": "Berkeley Mono 9",
+      "font_features": {
+        // "calt": false,
+        // "ss20": true,
+        // "ss01": true,
+        // "ss02": true,
+        // "ss03": true,
+        // "ss04": true,
+        "ss05": true,
+        // "cv02": true,
+        // "cv06": true,
+        // "cv07": true,
+      },
+      "line_height": "standard",
+    },
+    "buffer_font_family": "Berkeley Mono 9",
+    "buffer_font_features": {
+      // "calt": false,
+      // "ss20": true,
+      // "ss01": true,
+      // "ss02": true,
+      // "ss03": true,
+      // "ss04": true,
+      "ss05": true,
+      // "cv02": true,
+      // "cv06": true,
+      // "cv07": true,
+    },
+    "buffer_line_height": "standard",
+    "theme_overrides": {
+      "One Light": {
+        "vim.insert.background": "#649f5744",
+        "vim.normal.background": "#5c78e244",
+        "vim.visual.background": "#a449ab44",
+        "vim.visual_block.background": "#a449ab44",
+        "vim.visual_line.background": "#a449ab44",
+      },
+      "One Dark": {
+        "vim.insert.background": "#a1c18144",
+        "vim.normal.background": "#74ade844",
+        "vim.visual.background": "#b477cf44",
+        "vim.visual_block.background": "#b477cf44",
+        "vim.visual_line.background": "#b477cf44",
+      },
+      "Zedokai Light": {
+        "vim.insert.background": "#269d6955",
+        "vim.normal.background": "#1c8ca855",
+        "vim.visual.background": "#e1603255",
+        "vim.visual_block.background": "#e1603255",
+        "vim.visual_line.background": "#e1603255",
+      },
+      "Zedokai Darker": {
+        "vim.insert.background": "#a9dc7644",
+        "vim.normal.background": "#78dce844",
+        "vim.visual.background": "#fc986744",
+        "vim.visual_block.background": "#fc986744",
+        "vim.visual_line.background": "#fc986744",
+      },
+      "Zedokai": {
+        "vim.insert.background": "#a9dc7644",
+        "vim.normal.background": "#78dce844",
+        "vim.visual.background": "#fc986744",
+        "vim.visual_block.background": "#fc986744",
+        "vim.visual_line.background": "#fc986744",
+      },
+      "Zed Light": {
+        "vim.insert.background": "#3C933944",
+        "vim.normal.background": "#3480DF44",
+        "vim.visual.background": "#AB62E844",
+        "vim.visual_block.background": "#AB62E844",
+        "vim.visual_line.background": "#AB62E844",
+      },
+      "Zed Dark": {
+        "vim.insert.background": "#a9dc7644",
+        "vim.normal.background": "#739EE844",
+        "vim.visual.background": "#BE83FA44",
+        "vim.visual_block.background": "#BE83FA44",
+        "vim.visual_line.background": "#BE83FA44",
+      },
+      "Flexoki Light": {
+        "syntax": { "variable": { "color": "#100F0F" } },
+        "vim.insert.background": "#66800B44",
+        "vim.normal.background": "#205EA644",
+        "vim.visual.background": "#A02F6F44",
+        "vim.visual_block.background": "#A02F6F44",
+        "vim.visual_line.background": "#A02F6F44",
+      },
+      "Flexoki Dark": {
+        "syntax": { "variable": { "color": "#CECDC3" } },
+        "vim.insert.background": "#879A3944",
+        "vim.normal.background": "#4385BE44",
+        "vim.visual.background": "#CE5D9744",
+        "vim.visual_block.background": "#CE5D9744",
+        "vim.visual_line.background": "#CE5D9744",
+      },
+      "Zed One Dark": {
+        "terminal.foreground": "#e4e7e9ff",
+        "terminal.background": "#111317ff",
+        "vim.insert.background": "#98c37945",
+        "vim.normal.background": "#61afef45",
+        "vim.visual.background": "#e06c7545",
+        "vim.visual_block.background": "#e06c7545",
+        "vim.visual_line.background": "#e06c7545",
+      },
+      "Zed One Light": {
+        "vim.insert.background": "#3C933945",
+        "vim.normal.background": "#3480DF45",
+        "vim.visual.background": "#d3615145",
+        "vim.visual_block.background": "#d3615145",
+        "vim.visual_line.background": "#d3615145",
+      },
+      "GitHub Dark Dimmed": {
+        "terminal.background": "#212830ff",
+        "terminal.foreground": "#d1d7e0ff",
+        "terminal.bright_foreground": "#f0f6fcff",
+        "terminal.dim_foreground": "#9198a1ff",
+        "terminal.ansi.black": "#2f3742ff",
+        "terminal.ansi.bright_black": "#656c76ff",
+        "terminal.ansi.dim_black": "#2f3742ff",
+        "terminal.ansi.red": "#f47067ff",
+        "terminal.ansi.bright_red": "#ff938aff",
+        "terminal.ansi.dim_red": "#f47067ff",
+        "terminal.ansi.green": "#8ddb8cff",
+        "terminal.ansi.bright_green": "#a5e9a6ff",
+        "terminal.ansi.dim_green": "#57ab5aff",
+        "terminal.ansi.yellow": "#f69d50ff",
+        "terminal.ansi.bright_yellow": "#ffbd5cff",
+        "terminal.ansi.dim_yellow": "#c69026ff",
+        "terminal.ansi.blue": "#6cb6ffff",
+        "terminal.ansi.bright_blue": "#96d0ffff",
+        "terminal.ansi.dim_blue": "#539bf5ff",
+        "terminal.ansi.magenta": "#dcbdfbff",
+        "terminal.ansi.bright_magenta": "#eedcfdff",
+        "terminal.ansi.dim_magenta": "#b083f0ff",
+        "terminal.ansi.cyan": "#56d4ddff",
+        "terminal.ansi.bright_cyan": "#7ae3eaff",
+        "terminal.ansi.dim_cyan": "#39c5cfff",
+        "terminal.ansi.white": "#d1d7e0ff",
+        "terminal.ansi.bright_white": "#f0f6fcff",
+        "terminal.ansi.dim_white": "#9198a1ff",
+      },
+      "GitHub Light": {
+        "terminal.background": "#ffffffff",
+        "terminal.foreground": "#1f2328ff",
+        "terminal.bright_foreground": "#ffffffff",
+        "terminal.dim_foreground": "#59636eff",
+        "terminal.ansi.black": "#1f2328ff",
+        "terminal.ansi.bright_black": "#393f46ff",
+        "terminal.ansi.dim_black": "#1f2328ff",
+        "terminal.ansi.red": "#cf222eff",
+        "terminal.ansi.bright_red": "#d1242fff",
+        "terminal.ansi.dim_red": "#a40e26ff",
+        "terminal.ansi.green": "#1a7f37ff",
+        "terminal.ansi.bright_green": "#2da44eff",
+        "terminal.ansi.dim_green": "#116329ff",
+        "terminal.ansi.yellow": "#953800ff",
+        "terminal.ansi.bright_yellow": "#9a6700ff",
+        "terminal.ansi.dim_yellow": "#4d2d00ff",
+        "terminal.ansi.blue": "#0550aeff",
+        "terminal.ansi.bright_blue": "#0969daff",
+        "terminal.ansi.dim_blue": "#0a3069ff",
+        "terminal.ansi.magenta": "#8250dfff",
+        "terminal.ansi.bright_magenta": "#a475f9ff",
+        "terminal.ansi.dim_magenta": "#6639baff",
+        "terminal.ansi.cyan": "#1b7c83ff",
+        "terminal.ansi.bright_cyan": "#3192aaff",
+        "terminal.ansi.dim_cyan": "#0f5e64ff",
+        "terminal.ansi.white": "#59636eff",
+        "terminal.ansi.bright_white": "#818b98ff",
+        "terminal.ansi.dim_white": "#59636eff",
+      },
+    },
+    "experimental.theme_overrides": {
+      "syntax": {
+        // Always use italics for comments, regardless of the theme being used.
+        "comment": { "font_style": "italic" },
+        "comment.doc": { "font_style": "italic" },
+      },
+    },
+  },
+  "show_whitespaces": "trailing",
+  "vim_mode": true,
+  "relative_line_numbers": "enabled",
+  "command_aliases": {
+    "gd": "git::Diff",
+    "gb": "git::Branch",
+    "gbd": "git::BranchDiff",
+    "gp": "git::Push",
+    "gcp": "git::CreatePullRequest",
+  },
 }

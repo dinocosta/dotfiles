@@ -2,19 +2,18 @@
   {
     "context": "Editor && (vim_mode == normal || vim_mode == visual)",
     "bindings": {
-      // Mimick behaviour I had set up in NeoVim, where using <leader> followed by 'w' would write the file
-      // and <leader> followed by 'q' would close the buffer. In my case, <leader> was set to 'space', so that's
-      // what I'm using here.
+      // Mimick behaviour I had set up in NeoVim, where using <leader> followed
+      // by 'w' would write the file and <leader> followed by 'q' would close
+      // the buffer. In my case, <leader> was set to 'space', so that's what I'm
+      // using here.
       "space w": "workspace::Save",
-      "space q": "pane::CloseActiveItem"
-    }
-  },
-  {
-    "context": "Editor",
-    "bindings": {
-      "cmd-shift-t": "task::Spawn",
-      "cmd-shift-d": "editor::MoveLineDown"
-    }
+      "space q": "pane::CloseActiveItem",
+      "space b": "tab_switcher::ToggleAll",
+      "space c": "editor::CancelLanguageServerWork",
+      "space y": ["workspace::SendKeystrokes", "\" + y"],
+      "space p": ["workspace::SendKeystrokes", "\" + p"],
+      "space P": ["workspace::SendKeystrokes", "\" + P"],
+    },
   },
   {
     "context": "Dock",
@@ -26,7 +25,12 @@
       "ctrl-w ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-w ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-w ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-w ctrl-j": "workspace::ActivatePaneDown"
-    }
-  }
+      "ctrl-w ctrl-j": "workspace::ActivatePaneDown",
+    },
+  },
+  {
+    "bindings": {
+      "alt-shift-f": "zed::NoAction",
+    },
+  },
 ]
