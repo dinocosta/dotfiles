@@ -3,22 +3,16 @@
     {
       "actions" : [
         {
-          "key" : "z",
-          "label" : "Zed",
+          "key" : "d",
+          "label" : "Dia",
           "type" : "application",
-          "value" : "/Applications/Zed.app"
+          "value" : "/Applications/Dia.app"
         },
         {
-          "key" : "a",
-          "label" : "Arc",
+          "key" : "f",
+          "label" : "Flow",
           "type" : "application",
-          "value" : "/Applications/Arc.app"
-        },
-        {
-          "key" : "n",
-          "label" : "Notion",
-          "type" : "application",
-          "value" : "/Applications/Notion.app"
+          "value" : "/Applications/Flow.app"
         },
         {
           "actions" : [
@@ -40,22 +34,46 @@
           "type" : "group"
         },
         {
+          "key" : "n",
+          "label" : "Notion",
+          "type" : "application",
+          "value" : "/Applications/Notion.app"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "l",
+              "label" : "Slack",
+              "type" : "application",
+              "value" : "/Applications/Slack.app"
+            },
+            {
+              "key" : "p",
+              "label" : "Spotify",
+              "type" : "application",
+              "value" : "/Applications/Spotify.app"
+            },
+            {
+              "key" : "a",
+              "type" : "application",
+              "value" : "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
+            }
+          ],
+          "key" : "s",
+          "label" : "Slack, Spotify",
+          "type" : "group"
+        },
+        {
           "key" : "t",
           "label" : "Things",
           "type" : "application",
           "value" : "/Applications/Things3.app"
         },
         {
-          "key" : "d",
-          "label" : "Dia",
+          "key" : "z",
+          "label" : "Zed",
           "type" : "application",
-          "value" : "/Applications/Dia.app"
-        },
-        {
-          "key" : "s",
-          "label" : "Spotify",
-          "type" : "application",
-          "value" : "/Applications/Spotify.app"
+          "value" : "/Applications/Zed Nightly.app"
         }
       ],
       "key" : "a",
@@ -65,16 +83,35 @@
     {
       "actions" : [
         {
+          "key" : "p",
+          "label" : "Pause",
+          "type" : "url",
+          "value" : "raycast://extensions/vimtor/flow/pause-timer"
+        },
+        {
+          "key" : "s",
+          "label" : "Start",
+          "type" : "url",
+          "value" : "raycast://extensions/vimtor/flow/start-timer"
+        }
+      ],
+      "key" : "f",
+      "label" : "Flow",
+      "type" : "group"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "c",
+          "label" : "Calendar",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/calendar/my-schedule"
+        },
+        {
           "key" : "e",
           "label" : "Emoji",
           "type" : "url",
           "value" : "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
-        },
-        {
-          "key" : "s",
-          "label" : "Screensaver",
-          "type" : "url",
-          "value" : "raycast://extensions/koinzhang/screen-saver/start-screen-saver"
         },
         {
           "key" : "i",
@@ -83,10 +120,10 @@
           "value" : "raycast://ai-commands/improve-writing"
         },
         {
-          "key" : "c",
-          "label" : "Calendar",
+          "key" : "s",
+          "label" : "Screensaver",
           "type" : "url",
-          "value" : "raycast://extensions/raycast/calendar/my-schedule"
+          "value" : "raycast://extensions/koinzhang/screen-saver/start-screen-saver"
         },
         {
           "key" : "t",
@@ -101,32 +138,185 @@
     {
       "actions" : [
         {
-          "key" : "s",
-          "label" : "Start",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/raycast-focus/start-focus-session"
+          "key" : "1",
+          "label" : "Workspace 1",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace 1"
         },
         {
-          "key" : "p",
-          "label" : "Pause",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/raycast-focus/pause-focus-session"
+          "key" : "2",
+          "label" : "Workspace 2",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace 2"
+        },
+        {
+          "key" : "3",
+          "label" : "Workspace 3",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace 3"
+        },
+        {
+          "key" : "4",
+          "label" : "Workspace 4",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace 4"
+        },
+        {
+          "key" : "5",
+          "label" : "Workspace 5",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace workspace 5"
+        },
+        {
+          "key" : "s",
+          "label" : "Resize Mode",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace mode resize"
+        },
+        {
+          "key" : "f",
+          "label" : "Toggle Fullscreen",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace fullscreen"
         },
         {
           "key" : "r",
-          "label" : "Resume",
-          "type" : "url",
-          "value" : "raycast://extensions/raycast/raycast-focus/resume-focus-session"
+          "label" : "Reload Config",
+          "type" : "command",
+          "value" : "/opt/homebrew/bin/aerospace reload-config"
         },
         {
           "key" : "c",
-          "label" : "Complete",
+          "label" : "Center",
           "type" : "url",
-          "value" : "raycast://extensions/raycast/raycast-focus/complete-focus-session"
+          "value" : "raycast://extensions/raycast/window-management/center"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "h",
+              "label" : "Left",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move left"
+            },
+            {
+              "key" : "j",
+              "label" : "Down",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move down"
+            },
+            {
+              "key" : "k",
+              "label" : "Up",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move up"
+            },
+            {
+              "key" : "l",
+              "label" : "Right",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move right"
+            },
+            {
+              "key" : "1",
+              "label" : "Wokspace 1",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 1"
+            },
+            {
+              "key" : "2",
+              "label" : "Wokspace 2",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 2"
+            },
+            {
+              "key" : "3",
+              "label" : "Wokspace 3",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 3"
+            },
+            {
+              "key" : "4",
+              "label" : "Wokspace 4",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 4"
+            },
+            {
+              "key" : "5",
+              "label" : "Wokspace 5",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move-node-to-workspace 5"
+            },
+            {
+              "key" : "m",
+              "label" : "Workspace To Next Monitor",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace move-workspace-to-monitor --wrap-around next"
+            }
+          ],
+          "key" : "m",
+          "label" : "Move",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "f",
+              "label" : "Floating",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace layout floating tiling"
+            },
+            {
+              "key" : "a",
+              "label" : "Accordion",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace layout accordion horizontal vertical"
+            },
+            {
+              "key" : "t",
+              "label" : "Tiles",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace layout tiles vertical horizontal"
+            }
+          ],
+          "key" : "l",
+          "label" : "Layout",
+          "type" : "group"
+        },
+        {
+          "actions" : [
+            {
+              "key" : "h",
+              "label" : "Left",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace join-with left"
+            },
+            {
+              "key" : "j",
+              "label" : "Down",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace join-with down"
+            },
+            {
+              "key" : "k",
+              "label" : "Up",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace join-with up"
+            },
+            {
+              "key" : "l",
+              "label" : "Right",
+              "type" : "command",
+              "value" : "/opt/homebrew/bin/aerospace join-with right"
+            }
+          ],
+          "key" : "j",
+          "label" : "Join",
+          "type" : "group"
         }
       ],
-      "key" : "f",
-      "label" : "Raycast Focus",
+      "key" : "w",
+      "label" : "Window Management",
       "type" : "group"
     }
   ],
