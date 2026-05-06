@@ -117,7 +117,7 @@ eval "$(/Users/dino/.local/bin/mise activate zsh)"
 # Theme will be set depending on MacOS's Appearance.
 source <(fzf --zsh)
 if osascript -e 'tell application "System Events" to tell appearance preferences to return dark mode' | grep -q "true"; then
-    source $HOME/.config/fzf/zedokai.sh
+    source $HOME/.config/fzf/zed_dark.sh
 else
     source $HOME/.config/fzf/zedokai_light.sh
 fi
