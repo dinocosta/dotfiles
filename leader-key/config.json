@@ -105,30 +105,30 @@
           "key" : "c",
           "label" : "Calendar",
           "type" : "url",
-          "value" : "raycast://extensions/raycast/calendar/my-schedule"
+          "value" : "raycast-x://extensions/raycast/calendar/my-schedule"
         },
         {
           "key" : "e",
           "label" : "Emoji",
           "type" : "url",
-          "value" : "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
+          "value" : "raycast-x://extensions/raycast/emoji-symbols/search-emoji-symbols"
         },
         {
           "key" : "i",
           "label" : "Improve Writing",
           "type" : "url",
-          "value" : "raycast://ai-commands/improve-writing"
+          "value" : "raycast-x://extensions/raycast/ai/improve-writing"
         },
         {
           "key" : "s",
           "label" : "Screensaver",
           "type" : "url",
-          "value" : "raycast://extensions/koinzhang/screen-saver/start-screen-saver"
+          "value" : "raycast-x://extensions/koinzhang/screen-saver/start-screen-saver"
         },
         {
           "key" : "t",
           "type" : "url",
-          "value" : "raycast://extensions/loris/things/show-today-list"
+          "value" : "raycast-x://extensions/loris/things/show-today-list"
         }
       ],
       "key" : "r",
