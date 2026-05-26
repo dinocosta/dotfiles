@@ -195,27 +195,7 @@ alt-tab = 'workspace-back-and-forth'
 # down = 'volume down'
 # shift-down = ['volume set 0', 'mode main']
 
-# Automatically float Spotify app.
+# Automatically float all new windows, I've found it's usually better instead of
+# automatically squishing any existing windows.
 [[on-window-detected]]
-if.app-id = 'com.spotify.client'
-run = 'layout floating'
-
-# Automatically float Messages app.
-[[on-window-detected]]
-if.app-id = 'com.apple.MobileSMS'
-run = 'layout floating'
-
-# Automatically float WhatsApp.
-[[on-window-detected]]
-if.app-id = 'net.whatsapp.WhatsApp'
-run = 'layout floating'
-
-# Automatically float Passwords app.
-[[on-window-detected]]
-if.app-id = 'com.apple.Passwords'
-run = 'layout floating'
-
-# Automatically float compiled Zed builds.
-[[on-window-detected]]
-if.app-id = 'NULL-APP-BUNDLE-ID'
 run = 'layout floating'
