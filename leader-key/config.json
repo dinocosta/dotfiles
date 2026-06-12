@@ -86,17 +86,23 @@
           "key" : "p",
           "label" : "Pause",
           "type" : "url",
-          "value" : "raycast://extensions/vimtor/flow/pause-timer"
+          "value" : "raycast-x://extensions/raycast/raycast-focus/pause-focus-session"
         },
         {
           "key" : "s",
           "label" : "Start",
           "type" : "url",
-          "value" : "raycast://extensions/vimtor/flow/start-timer"
+          "value" : "raycast-x://extensions/raycast/raycast-focus/start-focus-session"
+        },
+        {
+          "key" : "r",
+          "label" : "Resume",
+          "type" : "url",
+          "value" : "raycast-x://extensions/raycast/raycast-focus/resume-focus-session"
         }
       ],
       "key" : "f",
-      "label" : "Flow",
+      "label" : "Focus",
       "type" : "group"
     },
     {
@@ -123,7 +129,7 @@
           "key" : "s",
           "label" : "Screensaver",
           "type" : "url",
-          "value" : "raycast-x://extensions/koinzhang/screen-saver/start-screen-saver"
+          "value" : "raycast-x://extensions/raycast/system-actions/show-screen-saver"
         },
         {
           "key" : "t",
